@@ -30,7 +30,7 @@ cd receipt-ocr
 - Install [tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html)
 - Install Docker.
 - Run Ollama in Docker
-    ```bash
+```bash
 # Pull the Ollama Docker image
 docker pull ollama/ollama
 
