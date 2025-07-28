@@ -1,18 +1,15 @@
-# Receipt OCR Engine
+# Amad Pay
 
-This repository hosts a script and a Docker-compose setup for performing Optical Character Recognition (OCR) on receipt images.
+This repository hosts a script and a Docker-compose setup for Amad Pay.
 
-![image](https://github.com/bhimrazy/receipt-ocr/assets/46085301/305df68d-50d8-41d4-81d0-9324966fb6c9)
+## Receipt OCR
 
-## Star History
+Optical Character Recognition (OCR) on receipt images.
+- using tenssact.
+- ollam (llava, llama3.2-vision)
 
-<a href="https://star-history.com/#bhimrazy/receipt-ocr&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=bhimrazy/receipt-ocr&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=bhimrazy/receipt-ocr&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=bhimrazy/receipt-ocr&type=Date" />
- </picture>
-</a>
+
+
 
 ## Prerequisites
 
@@ -25,12 +22,31 @@ This repository hosts a script and a Docker-compose setup for performing Optical
 ### Clone the repository
 
 ```bash
-git clone https://github.com/bhimrazy/receipt-ocr.git
+git clone https://github.com/bhimrazy/amad_pay.git
 cd receipt-ocr
 ```
 
 ### Set up Python environment (if not using Docker)
 - Install [tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html)
+- Install Docker.
+- Run Ollama in Docker
+    ```bash
+# Pull the Ollama Docker image
+docker pull ollama/ollama
+
+# Run the container 
+## GPU running on port 11434 (default)
+docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+## CPU running on port 11435
+docker run -d -v ollamacpu:/root/.ollamacpu -p 11435:11434 --name ollamacpu ollama/ollama
+
+# On each container pull the llama3.2-vision image. Run the command
+docker exec ollama ollama pull llama3.2-vision
+
+# On each container pull the llava image. Run the command
+docker exec ollama ollama pull llava
+```
+  
 
 ```bash
 # Create and activate a virtual environment (optional but recommended)
@@ -45,17 +61,13 @@ pip install -r requirements.txt
 
 ### Running the script locally
 
-#### `main.py`
+#### `fastapi`
 
-The `main.py` script performs OCR on an input image of a receipt.
+The `app/main.py` script performs OCR on an input image of a receipt.
 
 ```bash
-python main.py -i images/receipt.jpg
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
-
-Replace `images/receipt.jpg` with the path to your receipt image.
->Please ensure that the image is well-lit and that the edges of the receipt are clearly visible and detectable within the image.
-<img src="https://github.com/bhimrazy/receipt-ocr/assets/46085301/2ea009f0-9e15-42b2-9f15-063a8ec169f1" alt="Receipt Image" width="300" height="400">
 
 
 ### Using Docker-compose
@@ -72,23 +84,13 @@ Once the service is up and running, you can perform OCR on receipt images by sen
 
 The OCR functionality can be accessed via a FastAPI endpoint:
 
-- **POST** `/ocr/`: Upload a receipt image file to perform OCR. The response will contain the extracted text from the receipt.
+- **POST** `/parse-receipt`: Upload a receipt image file to perform OCR. The response will contain the extracted text from the receipt.
 
 Example usage with cURL:
 
 ```bash
-curl -X 'POST' \
-  'http://localhost:8000/ocr/' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'file=@images/paper-cash-sell-receipt-vector-23876532.jpg;type=image/jpeg'
+curl -X POST -F "file=@C:\Users\manal_qckxaa\Desktop\receipt-ocr\images\receipt1.jpg" http://localhost:8000/parse-receipt
 ```
-
-## Using Gemini
-- Gemini Docs:https://ai.google.dev/tutorials/python_quickstart
-- LinkedIn Post: https://www.linkedin.com/feed/update/urn:li:activity:7145860319150505984/
-  
-![image](https://github.com/bhimrazy/receipt-ocr/assets/46085301/ee4a0c82-f134-4a19-a275-93a59c7503b8)
 
 
 ## License
