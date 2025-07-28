@@ -1,0 +1,49 @@
+# Use official Ubuntu base image
+FROM ubuntu:22.04
+
+# Set environment variables to avoid interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+# Install system dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    python3.10 \
+    python3-pip \
+    python3-dev \
+    build-essential \
+    libpq-dev \
+    postgresql-client \
+    netcat \
+    curl \
+    vim \
+    && rm -rf /var/lib/apt/lists/* \
+    && ln -s /usr/bin/python3 /usr/bin/python
+
+RUN apt-get update && apt-get install -y \
+    python3-tk \      
+    x11-apps \         
+    && rm -rf /var/lib/apt/lists/*
+
+# Create and set working directory
+WORKDIR /app
+
+# Copy requirements first to leverage Docker cache
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY . .
+
+# Create a non-root user and switch to it
+RUN useradd -m appuser && \
+    chown -R appuser:appuser /app && \
+    mkdir -p /var/log/app && \
+    chown appuser:appuser /var/log/app
+USER appuser
+
+
+# Entrypoint script

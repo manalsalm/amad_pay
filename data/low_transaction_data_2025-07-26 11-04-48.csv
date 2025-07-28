@@ -1,0 +1,1001 @@
+Date,Description,Amount,Category
+2025-04-14,Pizza Hut,28.66,Dining
+2025-05-30,Bus Ticket,93.22,Transport
+2025-04-20,Costco,62.02,Groceries
+2025-03-17,Amazon Prime,77.5,Subscription
+2025-06-17,Starbucks,33.19,Dining
+2025-01-29,Pizza Hut,84.39,Dining
+2025-05-30,Costco,65.24,Groceries
+2025-01-19,Spotify,92.98,Subscription
+2025-02-12,Costco,91.17,Groceries
+2025-03-21,McDonald's,56.99,Dining
+2025-02-12,Starbucks,24.57,Dining
+2025-01-13,Walmart,18.66,Groceries
+2025-01-06,Bus Ticket,82.55,Transport
+2025-03-10,Amazon Prime,34.09,Subscription
+2025-01-20,Bus Ticket,57.8,Transport
+2025-05-07,McDonald's,76.78,Dining
+2025-04-02,Bus Ticket,69.02,Transport
+2025-06-15,Amazon Prime,13.75,Subscription
+2025-03-28,Costco,85.46,Groceries
+2025-01-23,Spotify,19.3,Subscription
+2025-03-07,Walmart,90.14,Groceries
+2025-03-20,Starbucks,26.7,Dining
+2025-04-16,Uber,48.12,Transport
+2025-06-02,Pizza Hut,78.24,Dining
+2025-04-06,Uber,38.17,Transport
+2025-03-27,Uber,60.56,Transport
+2025-03-05,Bus Ticket,30.16,Transport
+2025-06-14,Walmart,68.34,Groceries
+2025-06-09,Bus Ticket,83.34,Transport
+2025-04-13,Whole Foods,73.97,Groceries
+2025-05-29,Whole Foods,55.47,Groceries
+2025-04-09,Pizza Hut,16.97,Dining
+2025-03-08,McDonald's,52.27,Dining
+2025-05-19,Uber,92.08,Transport
+2025-02-18,Whole Foods,28.48,Groceries
+2025-05-12,Costco,73.48,Groceries
+2025-01-10,Spotify,71.63,Subscription
+2025-03-26,Netflix,31.0,Subscription
+2025-02-18,Amazon Prime,37.49,Subscription
+2025-06-12,Netflix,64.39,Subscription
+2025-03-05,Local Store,19.36,Shopping
+2025-01-28,Whole Foods,49.7,Groceries
+2025-02-25,Pizza Hut,57.06,Dining
+2025-01-06,Amazon Prime,84.3,Subscription
+2025-04-23,Pizza Hut,52.82,Dining
+2025-03-27,Bus Ticket,86.76,Transport
+2025-05-28,Starbucks,66.62,Dining
+2025-03-23,Bus Ticket,57.31,Transport
+2025-04-21,Amazon Prime,22.39,Subscription
+2025-04-17,Walmart,16.8,Groceries
+2025-01-08,Spotify,75.85,Subscription
+2025-06-13,Whole Foods,95.66,Groceries
+2025-02-16,Amazon Prime,72.79,Subscription
+2025-02-04,Taxi,24.86,Transport
+2025-03-15,Bus Ticket,70.41,Transport
+2025-06-15,Taxi,84.69,Transport
+2025-05-18,Taxi,40.09,Transport
+2025-03-22,Bus Ticket,92.77,Transport
+2025-06-23,Costco,85.5,Groceries
+2025-01-30,Uber,43.4,Transport
+2025-05-13,McDonald's,13.43,Dining
+2025-01-01,Spotify,11.3,Subscription
+2025-04-02,Amazon,91.45,Shopping
+2025-06-08,Walmart,55.94,Groceries
+2025-03-19,Uber,21.71,Transport
+2025-05-21,eBay,25.44,Shopping
+2025-06-10,Taxi,42.08,Transport
+2025-04-22,Local Store,48.82,Shopping
+2025-06-09,McDonald's,93.81,Dining
+2025-04-11,Bus Ticket,50.25,Transport
+2025-02-19,Amazon,45.1,Shopping
+2025-03-25,McDonald's,28.78,Dining
+2025-04-23,Starbucks,26.96,Dining
+2025-06-04,Amazon,53.25,Shopping
+2025-06-27,Bus Ticket,53.41,Transport
+2025-02-09,Pizza Hut,67.31,Dining
+2025-01-23,Uber,95.51,Transport
+2025-06-24,Costco,56.7,Groceries
+2025-03-07,Netflix,53.83,Subscription
+2025-03-12,Pizza Hut,24.28,Dining
+2025-04-29,Whole Foods,40.57,Groceries
+2025-04-28,Amazon Prime,62.05,Subscription
+2025-04-27,Starbucks,10.31,Dining
+2025-01-28,Taxi,71.86,Transport
+2025-01-07,Pizza Hut,15.11,Dining
+2025-05-06,Pizza Hut,99.7,Dining
+2025-02-21,Starbucks,39.0,Dining
+2025-06-20,Local Store,90.36,Shopping
+2025-06-07,Netflix,90.91,Subscription
+2025-01-05,Amazon Prime,89.95,Subscription
+2025-04-01,Uber,14.78,Transport
+2025-01-21,Uber,23.69,Transport
+2025-02-14,Walmart,25.32,Groceries
+2025-03-14,Pizza Hut,90.8,Dining
+2025-04-10,Costco,27.8,Groceries
+2025-04-08,Netflix,26.57,Subscription
+2025-01-07,Netflix,60.33,Subscription
+2025-03-10,Pizza Hut,25.25,Dining
+2025-02-02,Pizza Hut,83.67,Dining
+2025-03-18,Amazon Prime,73.58,Subscription
+2025-04-29,Whole Foods,80.18,Groceries
+2025-05-28,McDonald's,93.56,Dining
+2025-06-15,Netflix,62.17,Subscription
+2025-06-23,eBay,15.35,Shopping
+2025-05-16,Walmart,89.88,Groceries
+2025-06-16,Starbucks,45.8,Dining
+2025-04-04,Walmart,30.84,Groceries
+2025-05-27,eBay,83.14,Shopping
+2025-03-16,Bus Ticket,99.52,Transport
+2025-01-10,Walmart,75.91,Groceries
+2025-01-18,Netflix,50.74,Subscription
+2025-02-11,Netflix,32.29,Subscription
+2025-03-23,Walmart,47.6,Groceries
+2025-01-09,Netflix,95.59,Subscription
+2025-05-11,Local Store,14.43,Shopping
+2025-01-24,Costco,81.76,Groceries
+2025-01-07,Spotify,92.09,Subscription
+2025-06-13,Uber,85.93,Transport
+2025-03-05,Starbucks,76.67,Dining
+2025-03-26,Uber,48.86,Transport
+2025-03-26,McDonald's,20.72,Dining
+2025-05-04,McDonald's,22.49,Dining
+2025-05-15,Local Store,53.48,Shopping
+2025-03-06,Netflix,47.58,Subscription
+2025-06-01,Amazon,73.75,Shopping
+2025-06-14,eBay,23.77,Shopping
+2025-04-23,Local Store,56.7,Shopping
+2025-05-31,Whole Foods,40.48,Groceries
+2025-02-10,Amazon,20.48,Shopping
+2025-01-14,Amazon Prime,83.11,Subscription
+2025-02-21,Pizza Hut,27.84,Dining
+2025-03-30,Uber,34.92,Transport
+2025-06-13,Starbucks,88.95,Dining
+2025-03-12,Bus Ticket,18.54,Transport
+2025-04-20,Walmart,95.17,Groceries
+2025-06-16,Taxi,78.21,Transport
+2025-01-05,Pizza Hut,46.73,Dining
+2025-03-22,Pizza Hut,78.0,Dining
+2025-06-30,Costco,96.37,Groceries
+2025-04-07,Taxi,20.66,Transport
+2025-02-07,Local Store,92.98,Shopping
+2025-05-17,Walmart,76.05,Groceries
+2025-05-04,Uber,32.39,Transport
+2025-06-02,Walmart,37.16,Groceries
+2025-06-17,Spotify,69.9,Subscription
+2025-04-19,Taxi,34.57,Transport
+2025-06-27,McDonald's,61.5,Dining
+2025-03-05,Walmart,39.22,Groceries
+2025-03-18,Bus Ticket,21.54,Transport
+2025-04-07,Amazon Prime,88.63,Subscription
+2025-01-16,Local Store,69.54,Shopping
+2025-01-07,eBay,67.53,Shopping
+2025-06-13,Walmart,70.55,Groceries
+2025-02-01,Walmart,54.39,Groceries
+2025-04-14,Spotify,56.9,Subscription
+2025-06-28,Uber,73.48,Transport
+2025-01-13,Whole Foods,33.57,Groceries
+2025-03-16,Spotify,58.5,Subscription
+2025-05-20,Amazon Prime,94.5,Subscription
+2025-01-13,Taxi,38.68,Transport
+2025-03-11,Pizza Hut,14.55,Dining
+2025-05-26,Netflix,99.77,Subscription
+2025-05-14,Amazon,22.29,Shopping
+2025-03-07,McDonald's,84.83,Dining
+2025-03-24,Starbucks,23.6,Dining
+2025-06-16,eBay,73.94,Shopping
+2025-06-23,Netflix,50.54,Subscription
+2025-04-28,Spotify,78.99,Subscription
+2025-03-28,Spotify,86.81,Subscription
+2025-06-10,Uber,12.78,Transport
+2025-04-16,Pizza Hut,90.3,Dining
+2025-05-31,Costco,88.7,Groceries
+2025-06-02,Local Store,56.94,Shopping
+2025-05-10,Bus Ticket,87.2,Transport
+2025-02-11,Bus Ticket,30.66,Transport
+2025-04-15,Starbucks,37.48,Dining
+2025-05-16,Starbucks,41.96,Dining
+2025-06-03,Whole Foods,54.68,Groceries
+2025-06-08,Uber,70.94,Transport
+2025-05-26,Bus Ticket,26.22,Transport
+2025-02-01,Uber,91.55,Transport
+2025-01-15,eBay,30.89,Shopping
+2025-01-23,Spotify,79.33,Subscription
+2025-05-25,Amazon,59.49,Shopping
+2025-05-12,Whole Foods,10.03,Groceries
+2025-05-19,Costco,94.03,Groceries
+2025-02-12,Spotify,74.22,Subscription
+2025-01-12,Walmart,57.4,Groceries
+2025-04-09,Uber,24.81,Transport
+2025-04-25,Local Store,99.1,Shopping
+2025-04-24,Bus Ticket,40.17,Transport
+2025-01-31,Spotify,72.92,Subscription
+2025-06-28,Local Store,92.0,Shopping
+2025-06-20,eBay,86.38,Shopping
+2025-03-22,Starbucks,79.95,Dining
+2025-01-12,Taxi,37.95,Transport
+2025-04-12,Bus Ticket,18.11,Transport
+2025-06-07,Netflix,30.6,Subscription
+2025-06-28,Whole Foods,49.04,Groceries
+2025-02-16,Bus Ticket,68.43,Transport
+2025-05-15,Costco,75.45,Groceries
+2025-04-12,Local Store,14.58,Shopping
+2025-06-08,Uber,26.9,Transport
+2025-01-18,Starbucks,55.67,Dining
+2025-05-02,Starbucks,50.54,Dining
+2025-03-03,Whole Foods,71.77,Groceries
+2025-05-26,Amazon Prime,45.84,Subscription
+2025-04-07,Pizza Hut,18.31,Dining
+2025-04-23,Whole Foods,26.4,Groceries
+2025-03-12,Spotify,44.85,Subscription
+2025-05-27,Walmart,53.5,Groceries
+2025-01-17,Costco,92.67,Groceries
+2025-06-11,Pizza Hut,26.71,Dining
+2025-03-10,Taxi,76.29,Transport
+2025-03-15,Starbucks,82.75,Dining
+2025-04-22,Whole Foods,68.0,Groceries
+2025-05-02,Whole Foods,33.57,Groceries
+2025-05-26,Walmart,74.29,Groceries
+2025-01-10,Amazon,30.46,Shopping
+2025-05-06,Local Store,47.41,Shopping
+2025-02-10,Starbucks,82.04,Dining
+2025-02-24,Netflix,28.61,Subscription
+2025-04-21,Starbucks,11.82,Dining
+2025-01-15,Netflix,27.34,Subscription
+2025-06-28,Local Store,34.87,Shopping
+2025-06-04,Uber,68.64,Transport
+2025-04-01,Costco,21.02,Groceries
+2025-05-07,Starbucks,62.48,Dining
+2025-04-25,Amazon,42.51,Shopping
+2025-06-15,Spotify,34.97,Subscription
+2025-03-17,Amazon,20.63,Shopping
+2025-02-04,Bus Ticket,88.38,Transport
+2025-02-28,eBay,84.97,Shopping
+2025-06-02,Taxi,42.11,Transport
+2025-06-29,Uber,52.16,Transport
+2025-05-27,Local Store,78.35,Shopping
+2025-06-10,Pizza Hut,17.34,Dining
+2025-04-30,McDonald's,86.28,Dining
+2025-06-30,Costco,20.29,Groceries
+2025-06-14,Uber,18.66,Transport
+2025-05-22,Whole Foods,12.46,Groceries
+2025-02-12,eBay,82.2,Shopping
+2025-05-07,Costco,60.78,Groceries
+2025-03-05,McDonald's,68.84,Dining
+2025-04-15,Amazon,62.71,Shopping
+2025-03-03,Spotify,51.98,Subscription
+2025-02-28,Amazon,45.03,Shopping
+2025-02-18,Amazon Prime,41.41,Subscription
+2025-03-14,Netflix,65.4,Subscription
+2025-01-16,Whole Foods,94.89,Groceries
+2025-05-18,Local Store,58.03,Shopping
+2025-06-09,eBay,33.85,Shopping
+2025-03-09,McDonald's,12.32,Dining
+2025-01-25,Amazon Prime,63.41,Subscription
+2025-04-01,Spotify,73.72,Subscription
+2025-03-15,eBay,86.01,Shopping
+2025-04-30,Netflix,50.25,Subscription
+2025-03-26,Netflix,95.23,Subscription
+2025-05-05,Costco,84.59,Groceries
+2025-03-31,Pizza Hut,85.94,Dining
+2025-04-22,McDonald's,33.33,Dining
+2025-01-15,Bus Ticket,71.89,Transport
+2025-04-05,Pizza Hut,75.15,Dining
+2025-06-04,Bus Ticket,70.28,Transport
+2025-05-03,Netflix,37.09,Subscription
+2025-02-03,Pizza Hut,73.11,Dining
+2025-05-31,Taxi,73.69,Transport
+2025-06-20,Bus Ticket,29.22,Transport
+2025-06-23,Bus Ticket,54.19,Transport
+2025-05-13,Spotify,57.36,Subscription
+2025-05-05,Uber,48.32,Transport
+2025-03-17,Netflix,52.03,Subscription
+2025-05-18,Bus Ticket,46.2,Transport
+2025-06-03,McDonald's,50.74,Dining
+2025-04-02,Bus Ticket,99.24,Transport
+2025-03-26,Starbucks,41.57,Dining
+2025-05-28,Bus Ticket,83.81,Transport
+2025-06-10,Bus Ticket,49.7,Transport
+2025-03-26,Amazon Prime,22.59,Subscription
+2025-04-28,Costco,83.77,Groceries
+2025-03-02,Starbucks,42.22,Dining
+2025-02-17,Amazon Prime,35.69,Subscription
+2025-05-06,Taxi,12.27,Transport
+2025-02-16,Netflix,57.35,Subscription
+2025-03-07,Amazon,32.7,Shopping
+2025-06-20,Starbucks,40.04,Dining
+2025-02-26,Spotify,49.54,Subscription
+2025-03-23,Starbucks,20.37,Dining
+2025-02-19,Uber,57.72,Transport
+2025-04-10,Netflix,79.2,Subscription
+2025-06-13,eBay,10.58,Shopping
+2025-04-06,McDonald's,83.66,Dining
+2025-06-24,Bus Ticket,98.24,Transport
+2025-03-27,Bus Ticket,19.84,Transport
+2025-05-06,Uber,24.06,Transport
+2025-01-13,Costco,25.02,Groceries
+2025-03-16,Pizza Hut,11.08,Dining
+2025-03-01,Amazon,85.2,Shopping
+2025-03-18,Starbucks,57.43,Dining
+2025-01-27,Pizza Hut,16.57,Dining
+2025-02-10,Uber,66.48,Transport
+2025-04-17,Costco,68.95,Groceries
+2025-05-04,Costco,34.0,Groceries
+2025-05-01,Walmart,38.62,Groceries
+2025-01-16,McDonald's,65.46,Dining
+2025-02-04,Uber,95.21,Transport
+2025-02-08,Costco,21.33,Groceries
+2025-03-13,Whole Foods,31.71,Groceries
+2025-03-04,Local Store,69.07,Shopping
+2025-01-10,Starbucks,87.23,Dining
+2025-06-16,Spotify,61.61,Subscription
+2025-02-25,Local Store,51.44,Shopping
+2025-02-08,Costco,79.29,Groceries
+2025-03-28,Local Store,77.53,Shopping
+2025-02-13,Whole Foods,78.44,Groceries
+2025-05-03,Starbucks,93.55,Dining
+2025-02-08,Spotify,56.85,Subscription
+2025-02-18,Walmart,59.78,Groceries
+2025-03-17,Taxi,47.23,Transport
+2025-03-03,Pizza Hut,80.62,Dining
+2025-06-20,Netflix,20.54,Subscription
+2025-02-02,Taxi,69.18,Transport
+2025-03-30,Spotify,50.52,Subscription
+2025-01-05,Uber,14.59,Transport
+2025-01-10,McDonald's,40.66,Dining
+2025-06-17,Amazon Prime,19.6,Subscription
+2025-03-15,Local Store,94.31,Shopping
+2025-03-10,McDonald's,62.15,Dining
+2025-02-09,Whole Foods,18.45,Groceries
+2025-01-11,Starbucks,22.41,Dining
+2025-05-25,Amazon,51.34,Shopping
+2025-04-21,Taxi,85.86,Transport
+2025-04-23,Pizza Hut,55.93,Dining
+2025-05-07,Walmart,66.63,Groceries
+2025-05-12,Taxi,63.98,Transport
+2025-04-23,Local Store,16.45,Shopping
+2025-06-03,Local Store,96.79,Shopping
+2025-05-21,Costco,55.78,Groceries
+2025-03-12,Spotify,51.75,Subscription
+2025-03-04,Spotify,79.7,Subscription
+2025-05-02,eBay,27.4,Shopping
+2025-06-12,Walmart,74.79,Groceries
+2025-01-21,Netflix,79.72,Subscription
+2025-01-11,Amazon Prime,78.41,Subscription
+2025-01-31,Bus Ticket,71.74,Transport
+2025-05-16,Pizza Hut,22.95,Dining
+2025-01-11,Amazon Prime,53.59,Subscription
+2025-05-21,Amazon Prime,19.84,Subscription
+2025-01-30,Costco,24.25,Groceries
+2025-01-29,Whole Foods,91.33,Groceries
+2025-03-19,eBay,62.0,Shopping
+2025-05-27,Taxi,35.2,Transport
+2025-01-18,Amazon,54.3,Shopping
+2025-02-17,Spotify,39.77,Subscription
+2025-03-01,Bus Ticket,31.04,Transport
+2025-01-05,Local Store,43.43,Shopping
+2025-02-08,Netflix,98.35,Subscription
+2025-01-06,Uber,90.38,Transport
+2025-06-08,Starbucks,55.97,Dining
+2025-01-03,Spotify,42.78,Subscription
+2025-03-22,Netflix,17.15,Subscription
+2025-04-22,Amazon,66.36,Shopping
+2025-01-31,Amazon Prime,50.39,Subscription
+2025-05-23,Costco,64.57,Groceries
+2025-03-22,Amazon Prime,48.7,Subscription
+2025-06-12,Bus Ticket,61.54,Transport
+2025-03-19,Local Store,29.28,Shopping
+2025-01-01,Local Store,87.09,Shopping
+2025-03-13,Uber,17.06,Transport
+2025-03-30,Spotify,98.51,Subscription
+2025-04-14,Local Store,41.45,Shopping
+2025-05-28,McDonald's,80.14,Dining
+2025-01-14,Spotify,20.52,Subscription
+2025-04-12,Local Store,38.47,Shopping
+2025-05-12,Amazon Prime,55.53,Subscription
+2025-04-17,eBay,11.26,Shopping
+2025-06-06,Amazon Prime,51.21,Subscription
+2025-04-12,Amazon Prime,68.24,Subscription
+2025-04-11,Local Store,70.7,Shopping
+2025-01-13,Walmart,45.65,Groceries
+2025-03-02,Spotify,70.51,Subscription
+2025-03-15,Walmart,95.7,Groceries
+2025-05-21,Uber,54.6,Transport
+2025-04-19,McDonald's,50.18,Dining
+2025-04-15,eBay,32.65,Shopping
+2025-06-15,Amazon Prime,14.65,Subscription
+2025-03-23,Netflix,92.34,Subscription
+2025-05-21,Spotify,59.52,Subscription
+2025-04-02,Spotify,93.65,Subscription
+2025-05-12,Bus Ticket,56.0,Transport
+2025-03-26,Taxi,22.64,Transport
+2025-05-12,Walmart,65.54,Groceries
+2025-05-07,Walmart,26.32,Groceries
+2025-04-10,Starbucks,75.02,Dining
+2025-02-01,Uber,89.38,Transport
+2025-01-08,Amazon Prime,55.45,Subscription
+2025-02-09,Pizza Hut,13.8,Dining
+2025-02-24,Netflix,97.46,Subscription
+2025-04-22,Taxi,51.85,Transport
+2025-05-17,Costco,96.63,Groceries
+2025-06-20,Spotify,86.98,Subscription
+2025-06-08,Starbucks,54.18,Dining
+2025-03-22,Whole Foods,68.49,Groceries
+2025-05-27,Taxi,18.86,Transport
+2025-01-01,Starbucks,70.28,Dining
+2025-05-12,Amazon,76.91,Shopping
+2025-04-18,Spotify,31.56,Subscription
+2025-05-03,Uber,67.38,Transport
+2025-05-06,Whole Foods,55.34,Groceries
+2025-02-21,eBay,75.31,Shopping
+2025-04-03,Starbucks,45.4,Dining
+2025-02-25,Spotify,59.18,Subscription
+2025-06-04,Bus Ticket,99.7,Transport
+2025-04-21,eBay,49.69,Shopping
+2025-02-17,Amazon Prime,70.98,Subscription
+2025-03-28,Amazon Prime,57.99,Subscription
+2025-03-19,Uber,22.61,Transport
+2025-05-20,Netflix,61.69,Subscription
+2025-03-30,Amazon Prime,19.72,Subscription
+2025-01-02,Taxi,62.35,Transport
+2025-06-06,Walmart,98.7,Groceries
+2025-06-14,Amazon Prime,78.44,Subscription
+2025-04-05,Spotify,44.86,Subscription
+2025-02-18,McDonald's,38.15,Dining
+2025-05-15,Spotify,34.69,Subscription
+2025-06-29,Amazon Prime,76.13,Subscription
+2025-03-11,Spotify,40.8,Subscription
+2025-02-28,Costco,91.98,Groceries
+2025-05-07,Taxi,14.93,Transport
+2025-01-24,McDonald's,93.58,Dining
+2025-02-26,Bus Ticket,88.76,Transport
+2025-03-11,Pizza Hut,45.22,Dining
+2025-03-21,Spotify,79.27,Subscription
+2025-05-07,Taxi,53.22,Transport
+2025-05-04,Pizza Hut,86.52,Dining
+2025-03-31,Taxi,76.41,Transport
+2025-02-07,Walmart,76.42,Groceries
+2025-03-19,Taxi,90.03,Transport
+2025-06-02,Whole Foods,11.66,Groceries
+2025-04-16,eBay,58.75,Shopping
+2025-03-25,Spotify,13.35,Subscription
+2025-02-18,Starbucks,52.77,Dining
+2025-04-11,Walmart,42.53,Groceries
+2025-01-03,Whole Foods,81.54,Groceries
+2025-05-26,Starbucks,28.19,Dining
+2025-03-25,Whole Foods,95.64,Groceries
+2025-03-26,Uber,19.54,Transport
+2025-02-25,Amazon,96.9,Shopping
+2025-06-01,McDonald's,69.85,Dining
+2025-02-09,Uber,78.88,Transport
+2025-02-18,Costco,23.0,Groceries
+2025-04-30,Amazon,50.08,Shopping
+2025-01-03,Pizza Hut,36.37,Dining
+2025-01-28,Whole Foods,18.8,Groceries
+2025-06-15,Amazon Prime,18.11,Subscription
+2025-04-21,Local Store,59.09,Shopping
+2025-05-25,Walmart,10.74,Groceries
+2025-05-15,Uber,87.06,Transport
+2025-06-17,Amazon Prime,61.5,Subscription
+2025-04-30,Local Store,48.91,Shopping
+2025-06-04,Netflix,38.72,Subscription
+2025-06-04,Walmart,78.23,Groceries
+2025-01-31,Pizza Hut,79.46,Dining
+2025-04-22,Amazon,10.1,Shopping
+2025-05-27,Taxi,29.88,Transport
+2025-02-12,Local Store,74.63,Shopping
+2025-04-02,Local Store,62.21,Shopping
+2025-05-17,McDonald's,87.57,Dining
+2025-04-14,McDonald's,11.61,Dining
+2025-01-03,Netflix,82.85,Subscription
+2025-02-19,Amazon,99.42,Shopping
+2025-03-26,Costco,33.42,Groceries
+2025-06-03,McDonald's,48.45,Dining
+2025-05-31,Netflix,66.88,Subscription
+2025-01-11,Whole Foods,95.56,Groceries
+2025-02-21,McDonald's,96.18,Dining
+2025-05-20,Starbucks,87.66,Dining
+2025-02-09,Taxi,81.19,Transport
+2025-01-26,Uber,74.27,Transport
+2025-06-23,eBay,43.08,Shopping
+2025-03-02,Costco,58.37,Groceries
+2025-02-05,Spotify,29.09,Subscription
+2025-02-12,eBay,40.33,Shopping
+2025-01-31,Starbucks,86.99,Dining
+2025-01-24,Uber,85.91,Transport
+2025-02-11,McDonald's,92.55,Dining
+2025-03-28,Starbucks,33.38,Dining
+2025-05-24,eBay,92.01,Shopping
+2025-06-24,Pizza Hut,77.62,Dining
+2025-04-27,eBay,42.65,Shopping
+2025-03-27,Amazon,36.5,Shopping
+2025-06-27,Bus Ticket,50.38,Transport
+2025-06-06,McDonald's,14.62,Dining
+2025-05-19,Bus Ticket,90.27,Transport
+2025-02-22,Starbucks,71.04,Dining
+2025-01-05,Netflix,89.64,Subscription
+2025-01-02,McDonald's,14.84,Dining
+2025-04-23,Bus Ticket,95.43,Transport
+2025-03-01,McDonald's,50.71,Dining
+2025-04-02,McDonald's,27.34,Dining
+2025-01-28,Taxi,31.7,Transport
+2025-06-09,eBay,53.6,Shopping
+2025-04-21,Amazon,97.62,Shopping
+2025-06-11,Netflix,22.55,Subscription
+2025-04-16,Bus Ticket,76.73,Transport
+2025-02-27,eBay,13.18,Shopping
+2025-04-24,Taxi,67.09,Transport
+2025-05-24,Amazon Prime,88.84,Subscription
+2025-02-09,Taxi,54.05,Transport
+2025-05-26,Amazon Prime,81.97,Subscription
+2025-02-17,Bus Ticket,56.02,Transport
+2025-04-24,Walmart,63.83,Groceries
+2025-03-07,Taxi,24.79,Transport
+2025-03-22,Uber,20.77,Transport
+2025-03-28,McDonald's,37.81,Dining
+2025-04-03,Bus Ticket,98.06,Transport
+2025-03-26,Taxi,99.16,Transport
+2025-05-31,Spotify,62.49,Subscription
+2025-05-16,Walmart,56.76,Groceries
+2025-05-31,Netflix,58.18,Subscription
+2025-02-18,McDonald's,88.26,Dining
+2025-01-20,Amazon,47.41,Shopping
+2025-02-07,Pizza Hut,58.79,Dining
+2025-04-14,Taxi,74.99,Transport
+2025-03-04,Taxi,98.77,Transport
+2025-01-24,eBay,39.76,Shopping
+2025-01-18,Whole Foods,15.55,Groceries
+2025-01-06,Bus Ticket,72.51,Transport
+2025-01-03,Bus Ticket,87.28,Transport
+2025-02-06,Local Store,43.44,Shopping
+2025-05-19,Uber,80.02,Transport
+2025-05-06,Whole Foods,39.73,Groceries
+2025-01-03,Bus Ticket,89.73,Transport
+2025-05-16,Spotify,90.48,Subscription
+2025-05-19,Uber,63.99,Transport
+2025-05-22,Pizza Hut,26.41,Dining
+2025-03-03,Whole Foods,43.32,Groceries
+2025-05-07,Spotify,73.38,Subscription
+2025-04-08,Netflix,65.92,Subscription
+2025-04-29,Starbucks,22.97,Dining
+2025-04-26,Walmart,47.08,Groceries
+2025-05-06,McDonald's,75.28,Dining
+2025-04-20,eBay,87.17,Shopping
+2025-04-23,Starbucks,28.11,Dining
+2025-02-22,Taxi,90.89,Transport
+2025-03-27,Walmart,21.32,Groceries
+2025-02-11,Netflix,49.15,Subscription
+2025-06-20,Amazon Prime,68.45,Subscription
+2025-03-05,Costco,45.87,Groceries
+2025-05-13,Amazon,84.18,Shopping
+2025-06-19,Walmart,46.98,Groceries
+2025-02-10,Amazon Prime,13.09,Subscription
+2025-05-21,Starbucks,50.3,Dining
+2025-05-18,Netflix,34.23,Subscription
+2025-04-30,Whole Foods,20.13,Groceries
+2025-03-28,Taxi,56.78,Transport
+2025-03-06,Costco,36.19,Groceries
+2025-04-01,Local Store,95.52,Shopping
+2025-06-14,Taxi,28.74,Transport
+2025-04-11,eBay,71.81,Shopping
+2025-01-07,Amazon Prime,42.97,Subscription
+2025-03-11,Amazon,45.07,Shopping
+2025-01-02,Uber,53.8,Transport
+2025-06-18,Bus Ticket,40.4,Transport
+2025-04-22,Walmart,84.42,Groceries
+2025-05-23,eBay,64.18,Shopping
+2025-05-17,Pizza Hut,71.08,Dining
+2025-02-12,Pizza Hut,19.6,Dining
+2025-06-07,Whole Foods,30.01,Groceries
+2025-06-17,Taxi,84.33,Transport
+2025-05-06,Uber,18.25,Transport
+2025-04-25,Netflix,12.81,Subscription
+2025-01-11,Walmart,25.82,Groceries
+2025-05-07,Amazon Prime,93.98,Subscription
+2025-01-05,Starbucks,74.79,Dining
+2025-05-27,Pizza Hut,33.01,Dining
+2025-06-05,Pizza Hut,37.36,Dining
+2025-01-26,Bus Ticket,15.31,Transport
+2025-05-20,Spotify,23.58,Subscription
+2025-06-14,Uber,96.26,Transport
+2025-03-14,Amazon,47.42,Shopping
+2025-04-08,Whole Foods,21.63,Groceries
+2025-03-10,McDonald's,82.45,Dining
+2025-04-29,Taxi,65.18,Transport
+2025-02-15,McDonald's,81.46,Dining
+2025-03-19,Starbucks,38.62,Dining
+2025-05-15,Amazon Prime,80.77,Subscription
+2025-01-26,Uber,98.26,Transport
+2025-04-19,Costco,45.24,Groceries
+2025-06-10,Uber,19.51,Transport
+2025-06-16,Whole Foods,95.84,Groceries
+2025-05-22,Bus Ticket,53.88,Transport
+2025-02-08,Local Store,37.98,Shopping
+2025-01-08,Starbucks,92.16,Dining
+2025-03-20,Netflix,16.02,Subscription
+2025-05-28,Spotify,65.69,Subscription
+2025-05-24,Spotify,15.87,Subscription
+2025-03-29,McDonald's,97.5,Dining
+2025-03-18,Walmart,63.47,Groceries
+2025-05-24,Costco,12.07,Groceries
+2025-02-21,eBay,71.37,Shopping
+2025-02-09,Netflix,61.72,Subscription
+2025-04-11,Taxi,76.01,Transport
+2025-03-27,Whole Foods,10.14,Groceries
+2025-03-19,Netflix,71.58,Subscription
+2025-05-12,Amazon Prime,73.77,Subscription
+2025-06-10,Local Store,42.28,Shopping
+2025-02-07,Local Store,44.68,Shopping
+2025-04-07,Amazon Prime,85.37,Subscription
+2025-06-18,McDonald's,54.27,Dining
+2025-03-21,Pizza Hut,45.19,Dining
+2025-01-08,Local Store,86.83,Shopping
+2025-03-20,Local Store,48.46,Shopping
+2025-03-24,Uber,69.53,Transport
+2025-02-05,Bus Ticket,98.31,Transport
+2025-06-28,Pizza Hut,89.17,Dining
+2025-05-24,Whole Foods,26.29,Groceries
+2025-02-14,Amazon Prime,80.27,Subscription
+2025-03-16,Whole Foods,64.07,Groceries
+2025-04-24,eBay,71.93,Shopping
+2025-02-23,Walmart,21.35,Groceries
+2025-04-13,Costco,60.24,Groceries
+2025-02-23,Walmart,12.3,Groceries
+2025-01-08,Local Store,38.34,Shopping
+2025-02-04,Whole Foods,14.74,Groceries
+2025-05-01,Bus Ticket,21.4,Transport
+2025-04-30,Taxi,40.46,Transport
+2025-02-06,Uber,80.84,Transport
+2025-01-31,Taxi,82.07,Transport
+2025-06-19,Whole Foods,87.22,Groceries
+2025-05-07,Local Store,66.94,Shopping
+2025-03-27,Local Store,45.58,Shopping
+2025-05-29,Spotify,27.16,Subscription
+2025-06-04,Costco,30.35,Groceries
+2025-06-12,Local Store,68.38,Shopping
+2025-05-30,Netflix,47.81,Subscription
+2025-05-27,Amazon,59.67,Shopping
+2025-05-02,Bus Ticket,90.59,Transport
+2025-01-26,Local Store,19.91,Shopping
+2025-05-06,Bus Ticket,63.87,Transport
+2025-05-20,Walmart,56.98,Groceries
+2025-02-08,Netflix,98.06,Subscription
+2025-06-08,Pizza Hut,94.35,Dining
+2025-02-10,McDonald's,47.47,Dining
+2025-03-04,Amazon,77.33,Shopping
+2025-03-22,Amazon Prime,90.84,Subscription
+2025-01-06,Costco,87.12,Groceries
+2025-03-28,Bus Ticket,76.99,Transport
+2025-05-16,eBay,13.33,Shopping
+2025-02-12,Walmart,63.63,Groceries
+2025-03-10,Costco,62.58,Groceries
+2025-03-27,Taxi,36.02,Transport
+2025-04-04,Taxi,26.44,Transport
+2025-01-01,Whole Foods,28.1,Groceries
+2025-04-30,Uber,10.58,Transport
+2025-05-22,Starbucks,71.88,Dining
+2025-02-25,Bus Ticket,12.82,Transport
+2025-01-14,Amazon Prime,54.89,Subscription
+2025-03-05,Amazon Prime,70.06,Subscription
+2025-05-25,Amazon Prime,15.02,Subscription
+2025-03-04,Taxi,13.08,Transport
+2025-05-09,Taxi,21.36,Transport
+2025-02-22,McDonald's,35.89,Dining
+2025-03-15,Taxi,16.97,Transport
+2025-06-23,Costco,26.85,Groceries
+2025-05-30,Spotify,10.13,Subscription
+2025-01-19,Pizza Hut,85.36,Dining
+2025-01-10,Whole Foods,31.69,Groceries
+2025-03-28,Whole Foods,14.49,Groceries
+2025-03-02,Netflix,96.06,Subscription
+2025-05-05,Amazon,33.89,Shopping
+2025-01-15,Bus Ticket,13.07,Transport
+2025-03-26,Amazon,38.91,Shopping
+2025-01-08,Starbucks,94.82,Dining
+2025-02-26,Bus Ticket,14.46,Transport
+2025-03-24,Pizza Hut,27.95,Dining
+2025-02-23,Netflix,86.7,Subscription
+2025-04-24,Costco,25.15,Groceries
+2025-02-12,Bus Ticket,78.02,Transport
+2025-04-15,Taxi,77.59,Transport
+2025-03-19,Starbucks,17.62,Dining
+2025-01-06,eBay,70.53,Shopping
+2025-03-29,Local Store,30.31,Shopping
+2025-04-20,eBay,58.34,Shopping
+2025-06-26,Bus Ticket,43.32,Transport
+2025-02-01,Pizza Hut,61.65,Dining
+2025-06-05,Amazon,86.0,Shopping
+2025-03-12,Amazon,64.94,Shopping
+2025-02-24,Amazon,63.56,Shopping
+2025-06-29,McDonald's,72.56,Dining
+2025-02-09,eBay,30.5,Shopping
+2025-06-30,Amazon Prime,55.27,Subscription
+2025-05-10,Amazon,89.72,Shopping
+2025-05-29,McDonald's,55.55,Dining
+2025-06-12,Bus Ticket,38.65,Transport
+2025-06-03,eBay,43.56,Shopping
+2025-02-27,Bus Ticket,23.35,Transport
+2025-02-16,Local Store,60.36,Shopping
+2025-05-22,Amazon,16.7,Shopping
+2025-06-22,Netflix,71.48,Subscription
+2025-05-11,Whole Foods,95.04,Groceries
+2025-03-26,Bus Ticket,86.45,Transport
+2025-04-03,Netflix,78.25,Subscription
+2025-06-03,Amazon,67.21,Shopping
+2025-04-02,Bus Ticket,74.57,Transport
+2025-03-11,McDonald's,10.01,Dining
+2025-05-14,Amazon,77.89,Shopping
+2025-04-04,Amazon,31.09,Shopping
+2025-01-18,Amazon,65.2,Shopping
+2025-06-10,Costco,91.63,Groceries
+2025-02-16,eBay,90.33,Shopping
+2025-02-22,Amazon,75.13,Shopping
+2025-04-02,Pizza Hut,85.09,Dining
+2025-01-03,Spotify,81.08,Subscription
+2025-06-16,Pizza Hut,41.84,Dining
+2025-02-10,Spotify,50.57,Subscription
+2025-01-11,Costco,97.55,Groceries
+2025-02-14,Uber,13.29,Transport
+2025-05-10,Costco,14.9,Groceries
+2025-05-26,Amazon Prime,64.59,Subscription
+2025-03-23,Amazon,64.21,Shopping
+2025-02-01,Spotify,36.42,Subscription
+2025-05-31,Whole Foods,87.65,Groceries
+2025-05-31,Amazon,41.29,Shopping
+2025-03-31,Local Store,75.97,Shopping
+2025-04-05,Amazon,16.0,Shopping
+2025-04-19,Pizza Hut,15.06,Dining
+2025-06-19,Netflix,73.0,Subscription
+2025-04-20,Local Store,63.37,Shopping
+2025-04-16,Spotify,84.07,Subscription
+2025-04-15,Amazon Prime,71.8,Subscription
+2025-02-16,Amazon Prime,51.45,Subscription
+2025-05-02,Walmart,67.79,Groceries
+2025-05-09,Bus Ticket,92.06,Transport
+2025-04-17,McDonald's,67.95,Dining
+2025-06-02,Uber,65.36,Transport
+2025-02-11,eBay,23.43,Shopping
+2025-05-11,Netflix,83.88,Subscription
+2025-01-19,Starbucks,67.41,Dining
+2025-06-07,McDonald's,38.25,Dining
+2025-06-28,McDonald's,88.37,Dining
+2025-05-04,Whole Foods,74.5,Groceries
+2025-01-03,McDonald's,27.96,Dining
+2025-03-22,Amazon,52.26,Shopping
+2025-03-23,Amazon,89.07,Shopping
+2025-04-29,Uber,29.1,Transport
+2025-03-06,Walmart,91.6,Groceries
+2025-02-28,eBay,44.75,Shopping
+2025-01-21,Amazon Prime,31.7,Subscription
+2025-04-14,Amazon Prime,98.12,Subscription
+2025-04-24,Amazon Prime,11.2,Subscription
+2025-03-10,Bus Ticket,92.05,Transport
+2025-01-17,Amazon Prime,17.84,Subscription
+2025-01-11,Amazon Prime,68.94,Subscription
+2025-06-15,eBay,14.07,Shopping
+2025-06-05,Amazon Prime,11.56,Subscription
+2025-04-07,Starbucks,20.98,Dining
+2025-01-13,Whole Foods,38.19,Groceries
+2025-03-15,Bus Ticket,35.17,Transport
+2025-05-16,eBay,79.56,Shopping
+2025-04-14,Starbucks,98.54,Dining
+2025-04-22,Uber,59.06,Transport
+2025-01-31,McDonald's,81.35,Dining
+2025-01-19,Bus Ticket,26.38,Transport
+2025-02-08,Local Store,88.88,Shopping
+2025-05-28,Costco,93.96,Groceries
+2025-05-30,Spotify,58.03,Subscription
+2025-04-23,Starbucks,25.47,Dining
+2025-03-29,Pizza Hut,73.36,Dining
+2025-05-16,Bus Ticket,19.59,Transport
+2025-05-08,Bus Ticket,59.61,Transport
+2025-06-28,Spotify,36.54,Subscription
+2025-01-17,Amazon,99.27,Shopping
+2025-02-24,Starbucks,33.25,Dining
+2025-05-05,Netflix,77.74,Subscription
+2025-04-03,Whole Foods,11.52,Groceries
+2025-05-17,Local Store,13.08,Shopping
+2025-04-04,Netflix,54.8,Subscription
+2025-05-11,Uber,91.69,Transport
+2025-06-14,Spotify,11.34,Subscription
+2025-06-25,Amazon Prime,73.9,Subscription
+2025-03-03,Taxi,22.07,Transport
+2025-06-06,Costco,30.12,Groceries
+2025-06-29,McDonald's,15.89,Dining
+2025-01-26,McDonald's,42.04,Dining
+2025-04-03,Amazon Prime,92.17,Subscription
+2025-01-05,McDonald's,59.17,Dining
+2025-01-29,Spotify,47.39,Subscription
+2025-05-29,Bus Ticket,21.52,Transport
+2025-02-06,Pizza Hut,91.28,Dining
+2025-03-14,McDonald's,51.6,Dining
+2025-02-16,Amazon,18.74,Shopping
+2025-06-15,Whole Foods,39.23,Groceries
+2025-02-06,Uber,92.98,Transport
+2025-02-11,Starbucks,13.94,Dining
+2025-05-20,eBay,49.54,Shopping
+2025-04-21,Starbucks,90.37,Dining
+2025-02-05,Costco,15.9,Groceries
+2025-04-27,eBay,59.97,Shopping
+2025-02-12,McDonald's,65.42,Dining
+2025-01-23,Netflix,34.35,Subscription
+2025-02-20,Whole Foods,76.56,Groceries
+2025-03-26,Uber,34.65,Transport
+2025-04-28,Starbucks,21.51,Dining
+2025-05-22,Starbucks,43.53,Dining
+2025-03-02,Local Store,13.56,Shopping
+2025-02-05,Amazon,13.75,Shopping
+2025-04-29,Amazon,48.98,Shopping
+2025-06-18,Walmart,30.34,Groceries
+2025-03-10,Bus Ticket,36.43,Transport
+2025-03-20,Bus Ticket,49.02,Transport
+2025-06-18,Walmart,84.53,Groceries
+2025-06-10,Spotify,96.69,Subscription
+2025-02-27,Uber,68.48,Transport
+2025-01-17,Whole Foods,25.02,Groceries
+2025-05-24,Taxi,83.02,Transport
+2025-01-01,Netflix,14.98,Subscription
+2025-05-14,Amazon Prime,70.72,Subscription
+2025-01-21,Starbucks,73.03,Dining
+2025-01-14,Spotify,14.48,Subscription
+2025-02-28,Amazon,26.5,Shopping
+2025-04-02,McDonald's,81.1,Dining
+2025-04-15,Amazon Prime,12.7,Subscription
+2025-06-28,Starbucks,83.72,Dining
+2025-06-14,Walmart,38.63,Groceries
+2025-06-08,Spotify,89.96,Subscription
+2025-04-12,eBay,32.35,Shopping
+2025-05-22,Amazon,71.54,Shopping
+2025-02-13,Costco,55.57,Groceries
+2025-01-07,Whole Foods,21.27,Groceries
+2025-06-01,Spotify,31.87,Subscription
+2025-02-18,Amazon,88.51,Shopping
+2025-01-30,Bus Ticket,87.4,Transport
+2025-03-04,Costco,91.47,Groceries
+2025-05-14,Starbucks,34.91,Dining
+2025-05-02,Walmart,84.7,Groceries
+2025-06-24,Amazon Prime,97.35,Subscription
+2025-04-28,Uber,74.31,Transport
+2025-05-01,Taxi,59.82,Transport
+2025-02-20,Starbucks,29.41,Dining
+2025-05-19,Costco,71.4,Groceries
+2025-05-21,Costco,59.93,Groceries
+2025-01-03,Walmart,54.62,Groceries
+2025-06-24,Starbucks,21.25,Dining
+2025-06-05,Starbucks,18.44,Dining
+2025-02-11,Starbucks,14.37,Dining
+2025-01-26,Pizza Hut,12.28,Dining
+2025-06-16,Walmart,18.56,Groceries
+2025-02-09,Walmart,21.88,Groceries
+2025-04-10,Whole Foods,28.77,Groceries
+2025-03-19,McDonald's,55.09,Dining
+2025-05-30,Netflix,65.18,Subscription
+2025-06-20,Netflix,27.25,Subscription
+2025-03-06,Taxi,53.77,Transport
+2025-01-26,Taxi,81.22,Transport
+2025-06-20,Taxi,43.58,Transport
+2025-03-14,Spotify,91.16,Subscription
+2025-04-27,McDonald's,24.63,Dining
+2025-05-15,Pizza Hut,49.03,Dining
+2025-03-06,Starbucks,38.75,Dining
+2025-06-02,Netflix,35.76,Subscription
+2025-01-07,Uber,16.67,Transport
+2025-05-07,Taxi,41.71,Transport
+2025-05-26,Uber,93.51,Transport
+2025-02-22,Local Store,66.22,Shopping
+2025-04-18,Whole Foods,83.27,Groceries
+2025-02-10,McDonald's,32.8,Dining
+2025-03-30,Bus Ticket,27.45,Transport
+2025-01-25,Uber,13.96,Transport
+2025-06-17,Taxi,69.65,Transport
+2025-04-08,Costco,92.91,Groceries
+2025-04-06,Bus Ticket,19.59,Transport
+2025-01-15,Pizza Hut,67.59,Dining
+2025-05-23,Bus Ticket,64.92,Transport
+2025-06-18,Walmart,33.4,Groceries
+2025-01-15,McDonald's,64.74,Dining
+2025-05-11,Walmart,98.13,Groceries
+2025-01-01,Walmart,24.24,Groceries
+2025-04-10,Costco,15.37,Groceries
+2025-05-19,Pizza Hut,68.62,Dining
+2025-02-11,eBay,86.15,Shopping
+2025-04-26,McDonald's,73.57,Dining
+2025-06-30,Bus Ticket,77.1,Transport
+2025-05-23,Spotify,24.69,Subscription
+2025-01-10,Netflix,37.19,Subscription
+2025-03-15,Uber,80.85,Transport
+2025-06-10,Amazon Prime,34.19,Subscription
+2025-02-17,Whole Foods,37.39,Groceries
+2025-05-01,eBay,33.61,Shopping
+2025-01-07,Spotify,17.74,Subscription
+2025-01-18,eBay,91.27,Shopping
+2025-03-06,Taxi,75.52,Transport
+2025-02-08,Amazon Prime,43.23,Subscription
+2025-03-26,Local Store,32.65,Shopping
+2025-02-10,Uber,43.06,Transport
+2025-02-26,Walmart,23.2,Groceries
+2025-01-16,Costco,39.26,Groceries
+2025-06-06,Walmart,48.13,Groceries
+2025-06-24,Spotify,73.26,Subscription
+2025-04-02,Amazon,76.09,Shopping
+2025-02-20,eBay,93.25,Shopping
+2025-02-01,Amazon,82.07,Shopping
+2025-04-16,Local Store,36.5,Shopping
+2025-06-21,eBay,30.19,Shopping
+2025-01-13,McDonald's,41.63,Dining
+2025-03-22,Costco,29.06,Groceries
+2025-06-16,Costco,73.91,Groceries
+2025-01-08,Bus Ticket,63.64,Transport
+2025-01-31,Walmart,92.99,Groceries
+2025-05-16,Walmart,37.32,Groceries
+2025-06-12,Uber,44.66,Transport
+2025-02-02,Netflix,65.59,Subscription
+2025-06-03,Walmart,77.19,Groceries
+2025-02-20,Uber,33.06,Transport
+2025-01-13,Taxi,62.33,Transport
+2025-01-06,Whole Foods,38.81,Groceries
+2025-04-28,eBay,61.88,Shopping
+2025-01-15,Taxi,28.47,Transport
+2025-06-21,eBay,16.94,Shopping
+2025-01-30,Netflix,28.87,Subscription
+2025-02-18,Whole Foods,56.61,Groceries
+2025-02-28,Taxi,12.04,Transport
+2025-03-26,Walmart,75.43,Groceries
+2025-03-14,Bus Ticket,14.73,Transport
+2025-02-11,Costco,38.75,Groceries
+2025-06-19,Whole Foods,13.85,Groceries
+2025-02-08,McDonald's,40.58,Dining
+2025-05-10,Amazon Prime,55.32,Subscription
+2025-04-24,Spotify,67.37,Subscription
+2025-03-14,Pizza Hut,96.46,Dining
+2025-01-09,Spotify,16.77,Subscription
+2025-04-27,Bus Ticket,63.98,Transport
+2025-04-15,eBay,94.48,Shopping
+2025-04-28,McDonald's,38.06,Dining
+2025-01-25,Spotify,80.64,Subscription
+2025-03-28,Amazon Prime,70.7,Subscription
+2025-03-31,eBay,89.95,Shopping
+2025-04-02,Whole Foods,99.18,Groceries
+2025-04-15,Taxi,35.07,Transport
+2025-03-05,Starbucks,64.15,Dining
+2025-02-19,Amazon Prime,93.85,Subscription
+2025-03-01,Starbucks,43.99,Dining
+2025-06-06,Starbucks,98.0,Dining
+2025-03-05,eBay,53.44,Shopping
+2025-06-30,Netflix,93.95,Subscription
+2025-03-23,Uber,76.27,Transport
+2025-01-14,Starbucks,38.99,Dining
+2025-01-12,Starbucks,44.06,Dining
+2025-03-31,Walmart,46.89,Groceries
+2025-03-20,Pizza Hut,90.38,Dining
+2025-03-30,Whole Foods,89.44,Groceries
+2025-06-03,Pizza Hut,54.3,Dining
+2025-06-06,Netflix,31.55,Subscription
+2025-02-03,Uber,90.16,Transport
+2025-06-02,Pizza Hut,70.31,Dining
+2025-05-09,Pizza Hut,68.42,Dining
+2025-06-29,Bus Ticket,25.38,Transport
+2025-06-19,Amazon,15.37,Shopping
+2025-03-06,Spotify,84.49,Subscription
+2025-05-30,Netflix,21.73,Subscription
+2025-04-29,Costco,55.7,Groceries
+2025-02-16,eBay,56.38,Shopping
+2025-05-09,Pizza Hut,82.29,Dining
+2025-05-07,McDonald's,12.2,Dining
+2025-04-20,Costco,74.92,Groceries
+2025-01-19,Local Store,11.41,Shopping
+2025-03-09,Walmart,13.78,Groceries
+2025-06-27,Pizza Hut,36.35,Dining
+2025-01-16,Uber,46.05,Transport
+2025-05-18,Netflix,26.37,Subscription
+2025-06-03,Local Store,36.18,Shopping
+2025-03-14,Spotify,64.33,Subscription
+2025-03-09,Amazon,70.77,Shopping
+2025-05-15,Taxi,87.64,Transport
+2025-02-19,Starbucks,63.16,Dining
+2025-05-25,Spotify,68.27,Subscription
+2025-03-26,Costco,67.61,Groceries
+2025-01-14,Walmart,27.56,Groceries
+2025-06-21,Netflix,32.43,Subscription
+2025-04-26,Local Store,53.38,Shopping
+2025-05-22,Starbucks,57.1,Dining
+2025-02-13,Bus Ticket,35.52,Transport
+2025-06-25,Bus Ticket,61.39,Transport
+2025-01-05,Local Store,72.06,Shopping
+2025-03-27,Uber,44.28,Transport
+2025-02-03,Pizza Hut,63.68,Dining
+2025-03-02,Costco,51.95,Groceries
+2025-05-09,Walmart,62.5,Groceries
+2025-05-06,Starbucks,36.25,Dining
+2025-06-02,Whole Foods,59.99,Groceries
+2025-01-27,Taxi,41.19,Transport
+2025-06-15,Amazon Prime,12.92,Subscription
+2025-05-19,Taxi,51.38,Transport
+2025-03-30,Amazon Prime,70.07,Subscription
+2025-01-14,Starbucks,46.75,Dining
+2025-06-08,Pizza Hut,70.35,Dining
+2025-06-26,Amazon Prime,27.91,Subscription
+2025-03-01,Local Store,43.85,Shopping
+2025-06-05,eBay,64.0,Shopping
+2025-04-20,Bus Ticket,32.51,Transport
