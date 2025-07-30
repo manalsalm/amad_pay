@@ -14,6 +14,9 @@ Ather is a chatbot that helps predict the outcomes of financial decisions.
 - using pandas.
 - ollam (llama3)
 
+## Offers
+
+Offer recommendation feature that suggests personalized deals based on the user's most frequently purchased products, as well as available general promotions.
 
 ## Prerequisites
 

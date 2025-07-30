@@ -1,0 +1,7 @@
+[
+  {"product_id": "apple", "quantity": 5, "date": "2025-07-01"},
+  {"product_id": "banana", "quantity": 3, "date": "2025-07-02"},
+  {"product_id": "Orange", "quantity": 4, "date": "2025-07-10"},
+  {"product_id": "milk", "quantity": 1, "date": "2025-07-15"},
+  {"product_id": "Kiwi", "quantity": 4, "date": "2025-07-15"}
+]
