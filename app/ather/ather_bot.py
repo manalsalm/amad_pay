@@ -2,7 +2,8 @@ import os
 import pandas as pd
 import requests
 
-folder = "C:/Users/Nora-Basalamah/Documents/Amad Pay/amad_pay/data"
+folder = os.path.join(os.path.dirname(__file__), "..", "..", "data")
+folder = os.path.abspath(folder)
 all_files = [os.path.join(folder, f) for f in os.listdir(folder) if f.endswith('.csv')]
 dfs = []
 
