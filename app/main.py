@@ -9,10 +9,11 @@ import imutils
 import pytesseract
 from imutils.perspective import four_point_transform
 import numpy as np
+import pandas as pd
 
 import ollama
 
-from app.ocr.ocr_parser import ocr_receipt_parser 
+from app.ocr.ocr_parser import tensseract_receipt_parser 
 from app.llama.llama_receipt_parser import ask_llava, ask_llama, encode_image_to_base64
 from app.forecast import arima_forecast, lstm_forecast, Prophet, sarimax_forecast
 from app.forecast import check_saving_target_yearly, check_saving_target, forecast_all_categories, forecast_category
@@ -37,6 +38,7 @@ def read_items():
 @app.get("/Arima_Forcast")
 def read_items():
     return {"Forcast" : "Arima"}
+
 
 @app.post("/process-and-return-image")
 async def process_and_return_image(file: UploadFile = File(...)):
@@ -68,12 +70,12 @@ async def upload_image(file: UploadFile = File(...)):
     # Read image file
     contents = await file.read()
     
-    text = ocr_receipt_parser(contents)
+    text = tensseract_receipt_parser(contents)
     return {
         "content": text
     }
 
-@app.post("/OCR/parse-receipt-llava")
+@app.post("/ocr/parse-receipt-llava")
 async def parse_receipt(file: UploadFile = File(...)):
     image_bytes = await file.read()
     base64_image = encode_image_to_base64(image_bytes)
@@ -83,7 +85,7 @@ async def parse_receipt(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
-@app.post("/OCR/parse-receipt-llama-vision")
+@app.post("/ocr/parse-receipt-llama-vision")
 async def parse_receipt(file: UploadFile = File(...)):
     image_bytes = await file.read()
     base64_image = encode_image_to_base64(image_bytes)
@@ -93,3 +95,7 @@ async def parse_receipt(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
+@app.post("/Forecast/Prophet_Forcast")
+def read_items(file: UploadFile = File(...)):
+    df = pd.read_csv(file.file)
+    return {"Forcast" : "Prophet"}

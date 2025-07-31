@@ -6,7 +6,7 @@ import pytesseract
 from imutils.perspective import four_point_transform
 import numpy as np
 
-def ocr_receipt_parser(contents):
+def tensseract_receipt_parser(contents):
     
     # Convert to numpy array
     nparr = np.frombuffer(contents, np.uint8)
