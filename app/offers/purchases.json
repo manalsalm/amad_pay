@@ -1,7 +1,13 @@
 [
-  {"product_id": "apple", "quantity": 5, "date": "2025-07-01"},
-  {"product_id": "banana", "quantity": 3, "date": "2025-07-02"},
-  {"product_id": "Orange", "quantity": 4, "date": "2025-07-10"},
-  {"product_id": "milk", "quantity": 1, "date": "2025-07-15"},
-  {"product_id": "Kiwi", "quantity": 4, "date": "2025-07-15"}
+  {"store_name": "Tamimi",
+  "date": "28/07/2025",
+  "total_amount": "SR 40.0",
+  "items": [
+    {"name": "apple", "price": "SR 12.0", "quantity": "4"},
+    {"name": "banana", "price": "SR 3.0", "quantity": "1"},
+    {"name": "orange", "price": "SR 6.0", "quantity": "3"},
+    {"name": "milk", "price": "SR 25.0", "quantity": "5"},
+    {"name": "kiwi", "price": "SR 30.0", "quantity": "10"}
+  ]
+  }
 ]

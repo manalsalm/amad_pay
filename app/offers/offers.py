@@ -12,11 +12,12 @@ def get_matching_offers(purchases, offers, top_n=3):
     matches = []
     items = []
     for p in purchases:
-        pid = p["product_id"]
-        if p["quantity"] > 2:
-            items.append(pid)
+        for item in p["items"]:
+            pid = item["name"]
+            if int(item["quantity"]) > 2:
+                items.append(pid)
     for offer in offers:
-        if offer["product_id"] in items and datetime.strptime(offer["valid_until"], "%Y-%m-%d").date() >= today:
+        if offer["name"] in items:
             matches.append(offer)
     return matches
 
@@ -31,4 +32,3 @@ if __name__ == "__main__":
     general_offers  = get_offers()
     print(f"\nMatched Offers: {matched_offers}")
     print(f"\nGeneral Offers: {general_offers}")
-    user_input = input("\nYou: ")
