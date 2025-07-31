@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -105,7 +104,6 @@ def csv_lstm_forecast(csv_file, look_back=30, forecast_days=30, epochs=20,
 def lstm_forecast(df, look_back=30, forecast_days=30, epochs=20,
                   save_csv='lstm_forecast.csv', save_plot='lstm_forecast.png'):
     # Load and prepare data
-    #df = pd.read_csv(csv_file, parse_dates=['Date'])
     df['Amount'] = pd.to_numeric(df['Amount'], errors='coerce').fillna(0)
     daily_sum = df.groupby('Date')['Amount'].sum()
     full_dates = pd.date_range(daily_sum.index.min(), daily_sum.index.max())

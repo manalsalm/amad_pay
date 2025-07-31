@@ -90,19 +90,69 @@ docker-compose up
 
 Once the service is up and running, you can perform OCR on receipt images by sending a POST request to `http://localhost:8000/ocr/` with the image file.
 
-## API Endpoint
+# API Endpoint
 
+## Ather
+
+
+## Forecasting
+The Forecasting functionality can be accessed via a FastAPI endpoint:
+- **POST** `/forcast_data`: Upload a csv file to perform Forecasting. The response will contain df of result.
+
+### POST /forecast/Prophet_Forecast
+
+```bash
+curl -X POST -F "file=@C:\Users\manal_qckxaa\Desktop\amad_pay_github\data\consistent_transactions_data_2025-07-31 10-56-40.csv" http://localhost:8000/forecast/Prophet_Forecast
+```
+## OCR
 The OCR functionality can be accessed via a FastAPI endpoint:
 
 - **POST** `/parse-receipt`: Upload a receipt image file to perform OCR. The response will contain the extracted text from the receipt.
 
 Example usage with cURL:
 
+### POST /ocr/parse-receipt-tenssoract
 ```bash
-curl -X POST -F "file=@C:\Users\manal_qckxaa\Desktop\receipt-ocr\images\receipt1.jpg" http://localhost:8000/parse-receipt
+curl -X POST -F "file=@C:\Users\manal_qckxaa\Desktop\receipt-ocr\images\receipt1.jpg" http://localhost:8000/ocr/parse-receipt-tenssoract
 ```
 
+### POST /ocr/parse-receipt-llava
+```bash
+curl -X POST -F "file=@C:\Users\manal_qckxaa\Desktop\receipt-ocr\images\receipt1.jpg" http://localhost:8000/ocr/parse-receipt-llava
+```
 
+### POST /ocr/parse-receipt-llama-vision
+```bash
+curl -X POST -F "file=@C:\Users\manal_qckxaa\Desktop\receipt-ocr\images\receipt1.jpg" http://localhost:8000/ocr/parse-receipt-llama-vision
+```
+
+```
+Here is the extracted data in the specified format:
+
+{
+  "store_name": "Hittin",
+  "date": "2025/07/28",
+  "total_amount": "16.00",
+  "items": [
+    {
+      "name": "Hot Latte",
+      "price": "16.00",
+      "quantity": "1"
+    },
+    {
+      "name": "(15.0%)",
+      "price": "2.09",
+      "quantity": "1"
+    },
+    {
+      "name": "Mada",
+      "price": "16.00",
+      "quantity": "1"
+    }
+  ]
+}
+
+```
 ## License
 
 This project is licensed under the terms of the MIT license.

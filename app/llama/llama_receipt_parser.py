@@ -30,7 +30,7 @@ def ask_llava(base64_image):
     return response.json()["response"]
 
 def ask_llama(base64_image):
-    prompt = """Act as an OCR assistant. Analyze the provided image. Extract structured data in the format with make price  conversion to Saudi Riyal:
+    prompt = """Act as an OCR assistant. Analyze the provided image. Extract structured data in the format with make price  conversion to Saudi Riyal output as json :
 {
   "store_name": "...",
   "date": "...",

@@ -7,11 +7,12 @@ import pandas as pd
 from datetime import datetime, timedelta
 from prophet import Prophet
 from app.categorize import categorize
-from app.forecast import forecast_category , check_saving_target1, forecast_all_categories , forecast_all_categories1 , check_saving_target , check_saving_target_yearly , forecast_with_arima, sarimax_forecast, arima_forecast, lstm_forecast, load_and_prepare_data , create_generator, train_lstm, forecast_future, plot_forecast
+#from app.forecast import forecast_category , check_saving_target1, forecast_all_categories , forecast_all_categories1 , check_saving_target , check_saving_target_yearly , forecast_with_arima, sarimax_forecast, arima_forecast, lstm_forecast, load_and_prepare_data , create_generator, train_lstm, forecast_future, plot_forecast
 from app.recommender import generate_suggestions
 from app.generate_data import generate_low_transaction_data , generate_concise_transaction_data
 import matplotlib.pyplot as plt
-
+from app.forecasting.forecast_lstm import lstm_forecast
+from app.forecasting.forecast_prophet import prophet_forecast_all_categories
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -167,5 +168,6 @@ plt.tight_layout()
 plt.show()
 
 
-forecast_all_categories1(df, periods=30)
+prophet_forecast_all_categories(df, periods=30)
 
+lstm_forecast(spend1)
