@@ -12,7 +12,7 @@ def prophet_forecast_category(df, category, periods=7):
     df['Amount'] = pd.to_numeric(df['Amount'], errors='coerce')
 
     # Check for NaNs (missing or bad entries)
-    print(df['Amount'].isna().sum(), "bad amount entries found")
+    #print(df['Amount'].isna().sum(), "bad amount entries found")
     df_cat = df[df['Category'] == category]
     df_cat = df_cat.groupby('Date')['Amount'].sum().reset_index()
     df_cat.columns = ['ds', 'y']
@@ -50,20 +50,20 @@ def prophet_forecast_all_categories(df, periods=7):
             print(f"Not enough data to forecast for category: {category}")
     
     # Print forecast results for all categories
-    for category, forecast_df in all_forecasts.items():
-        print(f"--- Forecast for category: {category} ---")
-        for _, row in forecast_df.iterrows():
-            date = row['ds'].date()
-            predicted = row['yhat']
-            lower = row['yhat_lower']
-            upper = row['yhat_upper']
-            print(f"Date: {date}")
-            print(f"  Predicted spending: RS{predicted:.2f}")
-            print(f"  Likely range: RS{lower:.2f} to ${upper:.2f}")
-            print(f"  Explanation: You are expected to spend around RS{predicted:.2f} on {category} on {date}.")
-            print(f"               The spending could be as low as RS{lower:.2f} or as high as RS{upper:.2f}.")
-            print()
-
+    # for category, forecast_df in all_forecasts.items():
+    #     print(f"--- Forecast for category: {category} ---")
+    #     for _, row in forecast_df.iterrows():
+    #         date = row['ds'].date()
+    #         predicted = row['yhat']
+    #         lower = row['yhat_lower']
+    #         upper = row['yhat_upper']
+    #         print(f"Date: {date}")
+    #         print(f"  Predicted spending: RS{predicted:.2f}")
+    #         print(f"  Likely range: RS{lower:.2f} to ${upper:.2f}")
+    #         print(f"  Explanation: You are expected to spend around RS{predicted:.2f} on {category} on {date}.")
+    #         print(f"               The spending could be as low as RS{lower:.2f} or as high as RS{upper:.2f}.")
+    #         print()
+    return all_forecasts
 
 def prophet_check_saving_target(df, monthly_income, saving_target, forecast_period=30):
     """
