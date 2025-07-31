@@ -1,0 +1,5 @@
+[
+  {"product_id": "apple", "discount": "20%", "valid_until": "2025-08-01"},
+  {"product_id": "banana", "discount": "10%", "valid_until": "2025-07-31"},
+  {"product_id": "bread", "discount": "15%", "valid_until": "2025-08-10"}
+]

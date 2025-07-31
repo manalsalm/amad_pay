@@ -8,8 +8,15 @@ Optical Character Recognition (OCR) on receipt images.
 - using tenssact.
 - ollam (llava, llama3.2-vision)
 
+## Ather Chatbot
 
+Ather is a chatbot that helps predict the outcomes of financial decisions.
+- using pandas.
+- ollam (llama3)
 
+## Offers
+
+Offer recommendation feature that suggests personalized deals based on the user's most frequently purchased products, as well as available general promotions.
 
 ## Prerequisites
 
@@ -45,6 +52,9 @@ docker exec ollama ollama pull llama3.2-vision
 
 # On each container pull the llava image. Run the command
 docker exec ollama ollama pull llava
+
+# On each container pull the llama3 image. Run the command
+docker exec ollama ollama pull llama3
 ```
   
 
