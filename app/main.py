@@ -58,8 +58,8 @@ async def process_and_return_image(file: UploadFile = File(...)):
         media_type="image/png"
     )
 
-@app.post("/upload-receipt-image")
-async def upload_image(file: UploadFile = File(...)):
+@app.post("/ocr/parse-receipt-tenssoract")
+async def parse_receipt(file: UploadFile = File(...)):
     # Check if the uploaded file is an image
     if not file.content_type.startswith('image/'):
         return JSONResponse(
@@ -87,6 +87,12 @@ async def parse_receipt(file: UploadFile = File(...)):
 
 @app.post("/ocr/parse-receipt-llama-vision")
 async def parse_receipt(file: UploadFile = File(...)):
+    
+    """ parse-receipt-llama-vision"
+
+    Returns:
+        [type]: [description]
+    """    
     image_bytes = await file.read()
     base64_image = encode_image_to_base64(image_bytes)
     try:
