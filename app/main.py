@@ -20,7 +20,7 @@ from app.llama.llama_receipt_parser import ask_llava, ask_llama, encode_image_to
 from app.forecasting.forecast_prophet import prophet_forecast_category, prophet_forecast_all_categories, prophet_check_saving_target, prophet_check_saving_target_yearly
 import requests
 import base64
-
+from app.Module.ForcastCategories import ForecastCategories
 app = FastAPI()
 
 
@@ -101,9 +101,11 @@ async def parse_receipt(file: UploadFile = File(...)):
         return JSONResponse(content={"result": llama_response})
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
-
-@app.post("/forecast/Prophet_Forecast")
+import json
+@app.post("/forecast/prophet_forecast")
 def read_items(file: UploadFile = File(...)):
     df = pd.read_csv(file.file)
     result = prophet_forecast_all_categories(df)
+    result = {'results': [obj.__dict__ for obj in result]}
+    print(result)
     return result
