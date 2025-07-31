@@ -96,8 +96,14 @@ Once the service is up and running, you can perform OCR on receipt images by sen
 
 
 ## Forecasting
+The Forecasting functionality can be accessed via a FastAPI endpoint:
+- **POST** `/forcast_data`: Upload a csv file to perform Forecasting. The response will contain df of result.
 
+### POST /forecast/Prophet_Forecast
 
+```bash
+curl -X POST -F "file=@C:\Users\manal_qckxaa\Desktop\amad_pay_github\data\consistent_transactions_data_2025-07-31 10-56-40.csv" http://localhost:8000/forecast/Prophet_Forecast
+```
 ## OCR
 The OCR functionality can be accessed via a FastAPI endpoint:
 

@@ -64,6 +64,7 @@ def prophet_forecast_all_categories(df, periods=7):
             print(f"               The spending could be as low as RS{lower:.2f} or as high as RS{upper:.2f}.")
             print()
 
+    return all_forecasts
 
 def prophet_check_saving_target(df, monthly_income, saving_target, forecast_period=30):
     """
