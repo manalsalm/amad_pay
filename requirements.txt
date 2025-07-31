@@ -16,6 +16,7 @@ statsmodels
 
 numpy 
 tensorflow
+openpyxl
 
 sqlalchemy
 psycopg2-binary
