@@ -73,7 +73,7 @@ async def upload_image(file: UploadFile = File(...)):
         "content": text
     }
 
-@app.post("/parse-receipt")
+@app.post("/OCR/parse-receipt-llava")
 async def parse_receipt(file: UploadFile = File(...)):
     image_bytes = await file.read()
     base64_image = encode_image_to_base64(image_bytes)
@@ -83,7 +83,7 @@ async def parse_receipt(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
-@app.post("/parse-receipt")
+@app.post("/OCR/parse-receipt-llama-vision")
 async def parse_receipt(file: UploadFile = File(...)):
     image_bytes = await file.read()
     base64_image = encode_image_to_base64(image_bytes)

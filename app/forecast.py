@@ -307,6 +307,77 @@ def check_saving_target_yearly(csv_file, monthly_income, saving_target, forecast
                 f"is within your budget after savings (${budget_after_savings:.2f}). "
                 f"You have around ${spare:.2f} spare for extra expenses.")
 
+
+def check_saving_target_yearly1(df, monthly_income, saving_target, forecast_days=365):
+
+    # Ensure Amount is clean numeric
+    df['Amount'] = df['Amount'].replace('[\$,]', '', regex=True)
+    df['Amount'] = pd.to_numeric(df['Amount'], errors='coerce')
+
+    from prophet import Prophet
+
+    generation_date = datetime.now().strftime('%Y-%m-%d %H-%M-%S')
+
+    if saving_target * 12 > monthly_income * 12:
+        return ("Error: Your annual saving target exceeds your annual income. "
+                "Please lower your saving target or increase your income.")
+
+    # Aggregate daily total spending
+    df_daily = df.groupby('Date')['Amount'].sum().reset_index()
+    df_daily.columns = ['ds', 'y']
+    df_daily = df_daily.dropna(subset=['y'])
+    if len(df_daily) < 2:
+        return "Not enough data to forecast your spending."
+
+    # Fit Prophet model
+    model = Prophet(daily_seasonality=True, yearly_seasonality=True, weekly_seasonality=True)
+    model.fit(df_daily)
+
+    # Forecast future spending for next 365 days
+    future = model.make_future_dataframe(periods=forecast_days)
+    forecast = model.predict(future)
+
+    # Identify spikes: values above 1.5x standard deviation
+    threshold = forecast['yhat'].mean() + 1.5 * forecast['yhat'].std()
+    spikes = forecast[forecast['yhat'] > threshold]
+
+    # Plot with spikes
+    fig = model.plot(forecast)
+    plt.title("📈 Monthly Spending Forecast with Spikes")
+    plt.xlabel("Month")
+    plt.ylabel("Spending")
+
+    # Highlight spikes in red
+    plt.scatter(spikes['ds'], spikes['yhat'], color='red', label='Spike', zorder=3)
+    plt.legend()
+    plt.tight_layout()
+    # 🔽 Save the plot as PNG
+    fig.savefig(f"forcast_result/images/forecast_yearly_with_spikes_{generation_date}.png", dpi=300)
+    plt.show()
+    
+    # Optional: Save results
+    forecast.to_csv(f"forcast_result/csv/forecast_yearly_with_spikes_{generation_date}.csv", index=False)
+    # Sum predicted spending over the year
+    predicted_spending = forecast['yhat'].tail(forecast_days).sum()
+    predicted_spending = forecast['yhat'].tail(forecast_days).sum()
+
+    # Calculate budget left after savings (annualized)
+    annual_income = monthly_income * 12
+    annual_saving_target = saving_target * 12
+    budget_after_savings = annual_income - annual_saving_target
+
+    if predicted_spending > budget_after_savings:
+        excess = predicted_spending - budget_after_savings
+        return (f"Warning: Your predicted annual spending (${predicted_spending:.2f}) "
+                f"exceeds your budget after savings (${budget_after_savings:.2f}) by ${excess:.2f}. "
+                "Consider reducing expenses to meet your saving goal.")
+    else:
+        spare = budget_after_savings - predicted_spending
+        return (f"Good job! Your predicted annual spending (${predicted_spending:.2f}) "
+                f"is within your budget after savings (${budget_after_savings:.2f}). "
+                f"You have around ${spare:.2f} spare for extra expenses.")
+
+
 # Example:
 # message = check_saving_target_yearly(df, monthly_income=5000, saving_target=1000)
 # print(message)

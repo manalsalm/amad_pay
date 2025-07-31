@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
 
-def forecast_category(df, category, periods=7):
+def prophet_forecast_category(df, category, periods=7):
 
     # Ensure Amount is clean numeric
     df['Amount'] = df['Amount'].replace('[\$,]', '', regex=True)
@@ -34,7 +34,7 @@ def forecast_category(df, category, periods=7):
 
 
 
-def forecast_all_categories(df, periods=7):
+def prophet_forecast_all_categories(df, periods=7):
 
     # Ensure Amount is clean numeric
     df['Amount'] = df['Amount'].replace('[\$,]', '', regex=True)
@@ -43,7 +43,7 @@ def forecast_all_categories(df, periods=7):
     all_forecasts = {}
     
     for category in categories:
-        forecast_df = forecast_category(df, category, periods)
+        forecast_df = prophet_forecast_category(df, category, periods)
         if forecast_df is not None:
             all_forecasts[category] = forecast_df
         else:
@@ -65,7 +65,7 @@ def forecast_all_categories(df, periods=7):
             print()
 
 
-def check_saving_target(df, monthly_income, saving_target, forecast_period=30):
+def prophet_check_saving_target(df, monthly_income, saving_target, forecast_period=30):
     """
     Args:
         df: DataFrame with past transactions (with 'Date', 'Amount', 'Category').
@@ -126,7 +126,7 @@ def check_saving_target(df, monthly_income, saving_target, forecast_period=30):
 # print(message)
 
 
-def check_saving_target_yearly(df, monthly_income, saving_target, forecast_days=365):
+def prophet_check_saving_target_yearly(df, monthly_income, saving_target, forecast_days=365):
 
     # Ensure Amount is clean numeric
     df['Amount'] = df['Amount'].replace('[\$,]', '', regex=True)
@@ -177,7 +177,6 @@ def check_saving_target_yearly(df, monthly_income, saving_target, forecast_days=
     forecast.to_csv(f"forcast_result/csv/forecast_yearly_with_spikes_{generation_date}.csv", index=False)
     # Sum predicted spending over the year
     predicted_spending = forecast['yhat'].tail(forecast_days).sum()
-    predicted_spending = forecast['yhat'].tail(forecast_days).sum()
 
     # Calculate budget left after savings (annualized)
     annual_income = monthly_income * 12
@@ -186,14 +185,14 @@ def check_saving_target_yearly(df, monthly_income, saving_target, forecast_days=
 
     if predicted_spending > budget_after_savings:
         excess = predicted_spending - budget_after_savings
-        return (f"Warning: Your predicted annual spending (${predicted_spending:.2f}) "
-                f"exceeds your budget after savings (${budget_after_savings:.2f}) by ${excess:.2f}. "
+        return (f"Warning: Your predicted annual spending (RS{predicted_spending:.2f}) "
+                f"exceeds your budget after savings (RS{budget_after_savings:.2f}) by RS{excess:.2f}. "
                 "Consider reducing expenses to meet your saving goal.")
     else:
         spare = budget_after_savings - predicted_spending
-        return (f"Good job! Your predicted annual spending (${predicted_spending:.2f}) "
-                f"is within your budget after savings (${budget_after_savings:.2f}). "
-                f"You have around ${spare:.2f} spare for extra expenses.")
+        return (f"Good job! Your predicted annual spending (RS{predicted_spending:.2f}) "
+                f"is within your budget after savings (RS{budget_after_savings:.2f}). "
+                f"You have around RS{spare:.2f} spare for extra expenses.")
 
 # Example:
 # message = check_saving_target_yearly(df, monthly_income=5000, saving_target=1000)

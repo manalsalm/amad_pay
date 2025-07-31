@@ -3,7 +3,8 @@ import pandas as pd
 from datetime import datetime, timedelta
 from prophet import Prophet
 from app.categorize import categorize
-from app.forecast import forecast_category , forecast_all_categories , check_saving_target , check_saving_target_yearly , forecast_with_arima, sarimax_forecast, arima_forecast, lstm_forecast, load_and_prepare_data , create_generator, train_lstm, forecast_future, plot_forecast
+#from app.forecast import forecast_category , forecast_all_categories , check_saving_target , check_saving_target_yearly , forecast_with_arima, sarimax_forecast, arima_forecast, lstm_forecast, load_and_prepare_data , create_generator, train_lstm, forecast_future, plot_forecast
+from app.forecasting.forecast_prophet import prophet_check_saving_target, prophet_forecast_all_categories, prophet_forecast_category, prophet_check_saving_target_yearly
 from app.recommender import generate_suggestions
 from app.generate_data import generate_low_transaction_data , generate_concise_transaction_data
 import matplotlib.pyplot as plt
@@ -37,7 +38,7 @@ df['Category'] = df['Description'].apply(categorize)
 
 #forecast = forecast_with_arima(csv_cfilename, forecast_days=300)
 #print(forecast)
-sarimax_forecast(csv_file=filename,forecast_days=300,save_csv=f"forcast_result/csv/arima_forcast_{generation_date}.csv",save_plot=f"forcast_result/images/arima_forcast_{generation_date}.png")
+#sarimax_forecast(csv_file=filename,forecast_days=300,save_csv=f"forcast_result/csv/arima_forcast_{generation_date}.csv",save_plot=f"forcast_result/images/arima_forcast_{generation_date}.png")
 # Read and clean CSV
 df = pd.read_csv(filename, parse_dates=["Date"])
 
@@ -100,16 +101,16 @@ forecast_vals = forecast_future(model, scaled_data, scaler, look_back_days, futu
 # Plot results
 plot_forecast(daily_data, forecast_vals)
 '''
-lstm_forecast(filename, look_back=200, forecast_days=30, epochs=20,save_csv=f"forcast_result/csv/lstm_forcast_{generation_date}.csv",save_plot=f"forcast_result/images/lstm_forcast_{generation_date}.png")
+#lstm_forecast(filename, look_back=200, forecast_days=30, epochs=20,save_csv=f"forcast_result/csv/lstm_forcast_{generation_date}.csv",save_plot=f"forcast_result/images/lstm_forcast_{generation_date}.png")
 
 # Forecast Dining 
-forecast = forecast_category(filename, 'Groceries',periods=30*5)
+forecast = prophet_forecast_category(df, 'Groceries',periods=30*5)
 #print(forecast.tail())
 
 #df['Date'] = pd.to_datetime(df['Date'])
-forecast_all_categories(filename, periods=30*5)
+prophet_forecast_all_categories(df, periods=30*5)
 
-message = check_saving_target_yearly(filename, monthly_income=22000, saving_target=15000)
+message = prophet_check_saving_target_yearly(df, monthly_income=22000, saving_target=15000)
 print(message)
 
 # Print saving suggestions
