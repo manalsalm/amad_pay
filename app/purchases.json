@@ -30,22 +30,5 @@
         "quantity": "10"
       }
     ]
-  },
-  {
-    "store_name": "Hittin",
-    "date": "2025/07/28",
-    "total_amount": "16.00",
-    "items": [
-      {
-        "name": "Hot Latte",
-        "price": "16.00",
-        "quantity": "1"
-      },
-      {
-        "name": "Mada",
-        "price": "16.00",
-        "quantity": "1"
-      }
-    ]
   }
 ]

@@ -28,20 +28,24 @@ def ask_llama3(query, history):
     recom =  generate_suggestions(data)   
     
     try:
-        full_prompt = (
-            "You are a financial assistant analyzing the following tabular spending data and represent it in the decision:\n\n"
-            f"{sample}\n\n"
-            f"Use this as monthly income is:\n{income}\n\n"
-            f"Use this forcasting result for the decision:\n{forcast}\n\n"
-            f"Conversation history:\n{history}\n\n"
-            f"User's next question:\n{query}"
-            f"Give budgeting tips based on spending patterns and use also this recommendation for the tips :\n{recom}"
-            # "IMPORTANT: Your entire response must be valid JSON. Use ONLY the following format:\n"
-            # "{\n"
-            # '  "response": "your advice here"\n'
-            # "}\n"
-            # "Do not include any extra text outside the JSON. No explanations, no markdown, no headers — just JSON."
-        )
+        greetings = {"hello", "hi", "hey", "yo", "hiya"}
+        if query.strip().lower() in greetings:
+            full_prompt =  "Response with Hi and How I can help you?"
+        else:
+            full_prompt = (
+                "You are a financial assistant analyzing the following tabular spending data and represent it in the decision and represent all the currency as SAR:\n\n"
+                f"{sample}\n\n"
+                f"Use this as monthly income is:\n{income}\n\n"
+                f"Use this forcasting result for the decision:\n{forcast}\n\n"
+                f"Conversation history:\n{history}\n\n"
+                f"User's next question:\n{query}"
+                f"Give budgeting tips based on spending patterns and use also this recommendation for the tips :\n{recom}"
+                # "IMPORTANT: Your entire response must be valid JSON. Use ONLY the following format:\n"
+                # "{\n"
+                # '  "response": "your advice here"\n'
+                # "}\n"
+                # "Do not include any extra text outside the JSON. No explanations, no markdown, no headers — just JSON."
+            )
 
         payload = {
             "model": "llama3",         

@@ -33,7 +33,7 @@ def ask_llava(base64_image):
     return response.json()["response"]
 
 def ask_llama(base64_image):
-    prompt = """Extract only the data from the image in the following exact JSON format. Do not include any explanation or extra text. Return only valid JSON and all as string:
+    prompt = """Extract only the data from the image and return it strictly in the following JSON format. Do not add any explanation or extra text. Return only valid JSON:
 {
   "store_name": "...",
   "date": "...",
@@ -59,7 +59,7 @@ def ask_llama(base64_image):
     # show the raw output of the OCR process
     # print("[INFO] raw output:")
     # print("==================")
-    # print(response.json()["response"])
+    print(response.json()["response"])
     # print("\n")    
     print(response.json()["response"])
     new_data = json.loads(response.json()["response"])
