@@ -9,6 +9,8 @@ from imutils.perspective import four_point_transform
 import numpy as np
 import pandas as pd
 import json
+import numpy as np
+from PIL import Image
 
 
 from app.ocr.ocr_parser import tensseract_receipt_parser 
@@ -92,6 +94,24 @@ async def parse_receipt(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
+def resize_image(image_bytes: bytes, width: int = 300, height: int = 300) -> bytes:
+    """Resize image while maintaining aspect ratio"""
+    try:
+        # Read image from bytes
+        image = Image.open(io.BytesIO(image_bytes))
+        
+        # Resize maintaining aspect ratio
+        image.thumbnail((width, height))
+        
+        # Convert to bytes
+        img_byte_arr = io.BytesIO()
+        image.save(img_byte_arr, format='JPEG')
+        return img_byte_arr.getvalue()
+    
+    except Exception as e:
+        raise BaseException(status_code=400, detail=f"Image processing error: {str(e)}")
+    
+    
 @app.post("/ocr/parse-receipt-llama-vision")
 async def parse_receipt(file: UploadFile = File(...)):
     
@@ -100,8 +120,13 @@ async def parse_receipt(file: UploadFile = File(...)):
     Returns:
         [type]: [description]
     """    
+    # Read uploaded file
     image_bytes = await file.read()
+    
+    # Resize image
+    # ظظresized_bytes = resize_image(image_bytes, 256, 256)
     base64_image = encode_image_to_base64(image_bytes)
+    print(base64_image)
     try:
         llama_response = ask_llama(base64_image)
         return JSONResponse(content={"result": llama_response})
@@ -116,7 +141,7 @@ def read_items(file: UploadFile = File(...)):
     print(result)
     return result
 
-@app.post("/Offers/For_You_Offers")
+@app.post("/offers/for_you_offers")
 def get_general_offers():
     offers_folder = os.path.join(os.path.dirname(__file__), "offers.json")
     offers_folder = os.path.abspath(offers_folder)
@@ -129,7 +154,7 @@ def get_general_offers():
         matched_offers = get_matching_offers(purchase, offers)
         return matched_offers
 
-@app.post("/Offers/General_Offers")
+@app.post("/offers/general_offers")
 def get_general_offers():
     folder = os.path.join(os.path.dirname(__file__), "offers.json")
     folder = os.path.abspath(folder)
