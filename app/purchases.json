@@ -64,5 +64,56 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "store_name": "Givenchy",
+    "date": "2023-03-16",
+    "total_amount": 527.0,
+    "items": [
+      {
+        "name": "SKIN PERFECTO - 23 COMPACT CREAM",
+        "price": 214.0,
+        "quantity": 1
+      },
+      {
+        "name": "PL CONCEALER",
+        "price": 313.0,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "store_name": "GIVENCHY",
+    "date": "2023-09-01",
+    "total_amount": "527.00",
+    "items": [
+      {
+        "name": "SKIN PERFECTO -23 COMPACT CREAM",
+        "price": "214.00",
+        "quantity": "1"
+      },
+      {
+        "name": "PL CONCEALER-23",
+        "price": "213.00",
+        "quantity": "1"
+      }
+    ]
+  },
+  {
+    "store_name": "GIVENCHY",
+    "date": "2023-09-01",
+    "total_amount": "527.00",
+    "items": [
+      {
+        "name": "SKIN PERFECTO -23 COMPACT CREAM",
+        "price": "214.00",
+        "quantity": "1"
+      },
+      {
+        "name": "PL CONCEALER -23",
+        "price": "213.00",
+        "quantity": "1"
+      }
+    ]
   }
 ]

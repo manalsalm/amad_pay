@@ -33,14 +33,16 @@ def ask_llava(base64_image):
     return response.json()["response"]
 
 def ask_llama(base64_image):
-    prompt = """Extract the only the JSON format as folowing:
+    prompt = """Extract receipt information only and return result in JSON format as following:
 {
   "store_name": "...",
   "date": "...",
   "total_amount": "...",
   "items": [{"name": "...", "price": "...", "quantity": "..."}]
-}"""
-
+}
+, do not add any additional information. in case of error return null json:
+"""
+    print("1")
     payload = {
         "model": "llama3.2-vision",#"llava",
         "prompt": prompt,
@@ -55,11 +57,14 @@ def ask_llama(base64_image):
     # print("==================")
     # print(response.json()["response"])
     # print("\n")    
-
+    print(response.json())
     new_data = json.loads(response.json()["response"])
+    print(new_data)
     json_file = os.path.join(os.path.dirname(__file__), "..", "purchases.json")
+    print("3")
     json_file = os.path.abspath(json_file)
-    
+    print("4")
+
     # Load existing data (if any)
     if os.path.exists(json_file):
         with open(json_file, "r", encoding="utf-8") as f:
@@ -78,4 +83,4 @@ def ask_llama(base64_image):
     # Write back
     with open(json_file, "w", encoding="utf-8") as f:
         json.dump(existing_data, f, indent=2, ensure_ascii=False)
-    #return response.json()["response"]
+    return response.json()["response"]
