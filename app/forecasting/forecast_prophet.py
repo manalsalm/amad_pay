@@ -3,7 +3,7 @@ from prophet import Prophet
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
-
+from app.Module.ForcastCategories import ForecastCategories
 
 def prophet_forecast_category(df, category, periods=7):
 
@@ -36,6 +36,7 @@ def prophet_forecast_category(df, category, periods=7):
 
 def prophet_forecast_all_categories(df, periods=7):
 
+    categories_list = []
     # Ensure Amount is clean numeric
     df['Amount'] = df['Amount'].replace('[\$,]', '', regex=True)
     df['Amount'] = pd.to_numeric(df['Amount'], errors='coerce')
@@ -50,20 +51,22 @@ def prophet_forecast_all_categories(df, periods=7):
             print(f"Not enough data to forecast for category: {category}")
     
     # Print forecast results for all categories
-    # for category, forecast_df in all_forecasts.items():
-    #     print(f"--- Forecast for category: {category} ---")
-    #     for _, row in forecast_df.iterrows():
-    #         date = row['ds'].date()
-    #         predicted = row['yhat']
-    #         lower = row['yhat_lower']
-    #         upper = row['yhat_upper']
-    #         print(f"Date: {date}")
-    #         print(f"  Predicted spending: RS{predicted:.2f}")
-    #         print(f"  Likely range: RS{lower:.2f} to ${upper:.2f}")
-    #         print(f"  Explanation: You are expected to spend around RS{predicted:.2f} on {category} on {date}.")
-    #         print(f"               The spending could be as low as RS{lower:.2f} or as high as RS{upper:.2f}.")
-    #         print()
-    return all_forecasts
+    for category, forecast_df in all_forecasts.items():
+        print(f"--- Forecast for category: {category} ---")
+        for _, row in forecast_df.iterrows():
+            date = row['ds'].date()
+            predicted = row['yhat']
+            lower = row['yhat_lower']
+            upper = row['yhat_upper']
+            #print(f"Date: {date}")
+            #print(f"  Predicted spending: RS{predicted:.2f}")
+            #print(f"  Likely range: RS{lower:.2f} to ${upper:.2f}")
+            #print(f"  Explanation: You are expected to spend around RS{predicted:.2f} on {category} on {date}.")
+            #print(f"               The spending could be as low as RS{lower:.2f} or as high as RS{upper:.2f}.")
+            #print()
+            categories_list.append(ForecastCategories(category,date,predicted,lower,upper) )
+
+    return categories_list
 
 def prophet_check_saving_target(df, monthly_income, saving_target, forecast_period=30):
     """

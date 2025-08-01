@@ -1,18 +1,15 @@
 from fastapi import FastAPI, UploadFile, File , Depends
 from fastapi.responses import JSONResponse, StreamingResponse
 
-from sqlalchemy.orm import Session
 import os
 import io
 import cv2
-import imutils
-import pytesseract
+
 from imutils.perspective import four_point_transform
 import numpy as np
 import pandas as pd
 import json
 
-import ollama
 
 from app.ocr.ocr_parser import tensseract_receipt_parser 
 from app.llama.llama_receipt_parser import ask_llava, ask_llama, encode_image_to_base64
@@ -23,6 +20,10 @@ from app.ather.ather_bot import ask_llama3
 import requests
 import base64
 
+from app.forecasting.forecast_prophet import prophet_forecast_category, prophet_forecast_all_categories, prophet_check_saving_target, prophet_check_saving_target_yearly
+from app.Module.ForcastCategories import ForecastCategories
+
+from app.supermartket.suppermartket_offers import get_tamimi_supermarket_offer
 app = FastAPI()
 history = ""
 
@@ -42,7 +43,10 @@ def read_items():
 def read_items():
     return {"Forcast" : "Arima"}
 
-
+@app.get("/supermartket-offer/tamimi")
+async def get_tamimi_offer():
+    return get_tamimi_supermarket_offer()
+    
 @app.post("/process-and-return-image")
 async def process_and_return_image(file: UploadFile = File(...)):
     contents = await file.read()
@@ -61,8 +65,8 @@ async def process_and_return_image(file: UploadFile = File(...)):
         media_type="image/png"
     )
 
-@app.post("/upload-receipt-image")
-async def upload_image(file: UploadFile = File(...)):
+@app.post("/ocr/parse-receipt-tenssoract")
+async def parse_receipt(file: UploadFile = File(...)):
     # Check if the uploaded file is an image
     if not file.content_type.startswith('image/'):
         return JSONResponse(
@@ -90,6 +94,12 @@ async def parse_receipt(file: UploadFile = File(...)):
 
 @app.post("/ocr/parse-receipt-llama-vision")
 async def parse_receipt(file: UploadFile = File(...)):
+    
+    """ parse-receipt-llama-vision"
+
+    Returns:
+        [type]: [description]
+    """    
     image_bytes = await file.read()
     base64_image = encode_image_to_base64(image_bytes)
     try:
@@ -98,10 +108,13 @@ async def parse_receipt(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
-@app.post("/Forecast/Prophet_Forcast")
+@app.post("/forecast/prophet_forecast")
 def read_items(file: UploadFile = File(...)):
     df = pd.read_csv(file.file)
-    return {"Forcast" : "Prophet"}
+    result = prophet_forecast_all_categories(df)
+    result = {'results': [obj.__dict__ for obj in result]}
+    print(result)
+    return result
 
 @app.post("/Offers/For_You_Offers")
 def get_general_offers():
