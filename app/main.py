@@ -103,10 +103,11 @@ async def parse_receipt(file: UploadFile = File(...)):
     image_bytes = await file.read()
     base64_image = encode_image_to_base64(image_bytes)
     try:
-        llama_response = ask_llama(base64_image)
-        return JSONResponse(content={"result": llama_response})
+        ask_llama(base64_image)
+        # return JSONResponse(content={"result": llama_response})
     except Exception as e:
-        return JSONResponse(content={"error": str(e)}, status_code=500)
+        print(e)
+        # return JSONResponse(content={"error": str(e)}, status_code=500)
 
 @app.post("/forecast/prophet_forecast")
 def read_items(file: UploadFile = File(...)):
@@ -116,9 +117,9 @@ def read_items(file: UploadFile = File(...)):
     print(result)
     return result
 
-@app.post("/Offers/For_You_Offers")
+@app.post("/offers/for_you_offers")
 def get_general_offers():
-    offers_folder = os.path.join(os.path.dirname(__file__), "offers.json")
+    offers_folder = os.path.join(os.path.dirname(__file__), "..", "offers", "tamimi-product.json")
     offers_folder = os.path.abspath(offers_folder)
     purchases_folder = os.path.join(os.path.dirname(__file__), "purchases.json")
     purchases_folder = os.path.abspath(purchases_folder)
@@ -129,16 +130,16 @@ def get_general_offers():
         matched_offers = get_matching_offers(purchase, offers)
         return matched_offers
 
-@app.post("/Offers/General_Offers")
+@app.post("/offers/general_offers")
 def get_general_offers():
-    folder = os.path.join(os.path.dirname(__file__), "offers.json")
+    folder = os.path.join(os.path.dirname(__file__), "..", "offers", "tamimi-product.json")
     folder = os.path.abspath(folder)
     with open(folder) as f:
         offers = json.load(f) 
     matched_offers = get_offers(offers)
     return matched_offers
 
-@app.post("/ather")
+@app.post("/chatbot/ather")
 def ask_ather(query: str):
     global history
     (ather, history) = ask_llama3(query, history)
