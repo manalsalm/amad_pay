@@ -1,26 +1,22 @@
 from fastapi import FastAPI, UploadFile, File , Depends
 from fastapi.responses import JSONResponse, StreamingResponse
 
-from sqlalchemy.orm import Session
 import os
 import io
 import cv2
-import imutils
-import pytesseract
+
 from imutils.perspective import four_point_transform
 import numpy as np
 import pandas as pd
 
-import ollama
 
 from app.ocr.ocr_parser import tensseract_receipt_parser 
 from app.llama.llama_receipt_parser import ask_llava, ask_llama, encode_image_to_base64
-#from app.forecast import arima_forecast, lstm_forecast, Prophet, sarimax_forecast
-#from app.forecast import check_saving_target_yearly, check_saving_target, forecast_all_categories, forecast_category
+
 from app.forecasting.forecast_prophet import prophet_forecast_category, prophet_forecast_all_categories, prophet_check_saving_target, prophet_check_saving_target_yearly
-import requests
-import base64
 from app.Module.ForcastCategories import ForecastCategories
+
+from app.supermartket.suppermartket_offers import get_tamimi_supermarket_offer
 app = FastAPI()
 
 
@@ -40,7 +36,10 @@ def read_items():
 def read_items():
     return {"Forcast" : "Arima"}
 
-
+@app.get("/supermartket-offer/tamimi")
+async def get_tamimi_offer():
+    return get_tamimi_supermarket_offer()
+    
 @app.post("/process-and-return-image")
 async def process_and_return_image(file: UploadFile = File(...)):
     contents = await file.read()
@@ -101,7 +100,7 @@ async def parse_receipt(file: UploadFile = File(...)):
         return JSONResponse(content={"result": llama_response})
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
-import json
+
 @app.post("/forecast/prophet_forecast")
 def read_items(file: UploadFile = File(...)):
     df = pd.read_csv(file.file)

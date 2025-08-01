@@ -1,30 +1,6 @@
-import urllib.request
-from html.parser import HTMLParser
+import requests
+from bs4 import BeautifulSoup
 import json
-import re
-
-class ScriptExtractor(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.scripts = []
-        self._in_script = False
-        self._current = None
-
-    def handle_starttag(self, tag, attrs):
-        if tag.lower() == "script":
-            self._in_script = True
-            self._current = {"content": ""}
-
-    def handle_data(self, data):
-        if self._in_script and self._current is not None:
-            self._current["content"] += data
-
-    def handle_endtag(self, tag):
-        if tag.lower() == "script" and self._in_script:
-            self._current["content"] = self._current["content"].strip()
-            self.scripts.append(self._current)
-            self._in_script = False
-            self._current = None
 
 import requests
 from bs4 import BeautifulSoup
@@ -46,21 +22,16 @@ def parse_products(json_data):
     for product in json_data:
         # Extract basic product info
         product_info = {
-            'id': product.get('id'),
             'name': product.get('name'),
-            'brand': product.get('brand', {}).get('name') if product.get('brand') else None,
-            'category': product.get('primaryCategory', {}).get('name') if product.get('primaryCategory') else None,
-            'description': product.get('description'),
             'image': "",
-            #'variants': [],
-            'full_name':"",
-            'mrp':"",
+            'original_price':"",
             'discount':"",
-            'price_after_discount':""
+            'price_after':""
         }
         
         # Parse variants
         for variant in product.get('variants', []):
+            '''''
             variant_info = {
                 'variant_id': variant.get('id'),
                 'name': variant.get('name'),
@@ -69,9 +40,11 @@ def parse_products(json_data):
                 'pricing': [],
                 
             }
+            '''
             product_info['image'] = variant.get('images', [None])[0] if variant.get('images')[0] else None,
             # Parse pricing for each store
             for store_data in variant.get('storeSpecificData', []):
+                '''''
                 pricing = {
                     'store_id': store_data.get('storeId'),
                     'mrp': store_data.get('mrp'),
@@ -81,9 +54,10 @@ def parse_products(json_data):
                     'unit': store_data.get('unit'),
                     'tax': store_data.get('tax', {}).get('VAT') if store_data.get('tax') else None
                 }
-                product_info['mrp'] = store_data.get('mrp')
+                '''
+                product_info['original_price'] = store_data.get('mrp')
                 product_info['discount'] = store_data.get('discount')
-                product_info['price_after_discount'] = float(store_data.get('mrp', 0)) - float(store_data.get('discount', 0))
+                product_info['price_after'] = float(store_data.get('mrp', 0)) - float(store_data.get('discount', 0))
                 #variant_info['pricing'].append(pricing)
             
             #product_info['variants'].append(variant_info)
@@ -142,24 +116,23 @@ def get_script_tags_from_url(url):
         return []
 
 def extract_product_data(scripts):
+    """AI is creating summary for extract_product_data
+
+    Args:
+        scripts (str): list of html script tags content
+
+    Returns:
+        [type]: [description]
+    """
     parsed_products = []
 
     for script in scripts:
-        #print(script)
+        
         content = script["content"]
-        test = json.loads(content )
-                #print(test)
-        test = test["props"]
-        test = test["pageProps"]
-        test = test["layouts"]
-        test = test["data"]
-        test = test["page"]
-        test = test["layouts"]
-        test = test[0]["value"]
-        test = test["collection"]
-        product_data = test["product"]
-                # Example usage:
-                # Assuming your JSON data is in a variable called 'product_data'
+        content = json.loads(content )
+
+        product_data = content["props"]["pageProps"]["layouts"]["data"]["page"]["layouts"][0]["value"]["collection"]["product"]
+
         parsed_products = parse_products(product_data)
         print(json.dumps(parsed_products, indent=2))
 
@@ -169,27 +142,14 @@ def extract_product_data(scripts):
             print(json.dumps(parsed_products[0], indent=2))
             print(parsed_products[0]["image"][0])
                                     
-        with open("tamimi-product.json", "w", encoding="utf-8") as f:
+        with open("offers/tamimi-product.json", "w", encoding="utf-8") as f:
             json.dump(parsed_products, f, indent=2, ensure_ascii=False)        
     
     return parsed_products
 
-if __name__ == "__main__":
+def get_tamimi_supermarket_offer():
     url = "https://shop.tamimimarkets.com/tag/weekly-offers-1"
     scripts = get_script_tags_from_url(url)
     products = extract_product_data(scripts)
+    return products
     
-    # Extract and print product names and prices
-    for product in products:
-        name = product.get('name', 'N/A')
-        varieties = product.get('varieties', [])
-        for variety in varieties:
-            price = variety.get('price', 'N/A')
-            undiscounted = variety.get('undiscounted_price', 'N/A')
-            discount = variety.get('discount_label', '')
-            print(f"{name} - Price: {price} (Original: {undiscounted}) {discount}")
-    
-    # Save all product data
-    with open("products.json", "w", encoding="utf-8") as f:
-        json.dump(products, f, indent=2, ensure_ascii=False)
-    print(f"Extracted {len(products)} products, saved to products.json")
