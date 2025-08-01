@@ -8,17 +8,24 @@ import cv2
 from imutils.perspective import four_point_transform
 import numpy as np
 import pandas as pd
+import json
 
 
 from app.ocr.ocr_parser import tensseract_receipt_parser 
 from app.llama.llama_receipt_parser import ask_llava, ask_llama, encode_image_to_base64
+from app.forecast import arima_forecast, lstm_forecast, Prophet, sarimax_forecast
+from app.forecast import check_saving_target_yearly, check_saving_target, forecast_all_categories, forecast_category
+from app.offers.offers import get_matching_offers, get_offers
+from app.ather.ather_bot import ask_llama3
+import requests
+import base64
 
 from app.forecasting.forecast_prophet import prophet_forecast_category, prophet_forecast_all_categories, prophet_check_saving_target, prophet_check_saving_target_yearly
 from app.Module.ForcastCategories import ForecastCategories
 
 from app.supermartket.suppermartket_offers import get_tamimi_supermarket_offer
 app = FastAPI()
-
+history = ""
 
 @app.get("/")
 def read_root():
@@ -108,3 +115,32 @@ def read_items(file: UploadFile = File(...)):
     result = {'results': [obj.__dict__ for obj in result]}
     print(result)
     return result
+
+@app.post("/Offers/For_You_Offers")
+def get_general_offers():
+    offers_folder = os.path.join(os.path.dirname(__file__), "offers.json")
+    offers_folder = os.path.abspath(offers_folder)
+    purchases_folder = os.path.join(os.path.dirname(__file__), "purchases.json")
+    purchases_folder = os.path.abspath(purchases_folder)
+    with open(purchases_folder) as f:
+        purchase = json.load(f)
+    with open(offers_folder) as f:
+        offers = json.load(f) 
+        matched_offers = get_matching_offers(purchase, offers)
+        return matched_offers
+
+@app.post("/Offers/General_Offers")
+def get_general_offers():
+    folder = os.path.join(os.path.dirname(__file__), "offers.json")
+    folder = os.path.abspath(folder)
+    with open(folder) as f:
+        offers = json.load(f) 
+    matched_offers = get_offers(offers)
+    return matched_offers
+
+@app.post("/ather")
+def ask_ather(query: str):
+    global history
+    (ather, history) = ask_llama3(query, history)
+    print(ather)
+    return ather
