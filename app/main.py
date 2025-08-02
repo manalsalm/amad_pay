@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File , Depends
+from fastapi import FastAPI, HTTPException, logger, UploadFile, File , Depends
 from fastapi.responses import JSONResponse, StreamingResponse
 
 import os
@@ -26,12 +26,18 @@ from app.forecasting.forecast_prophet import prophet_forecast_category, prophet_
 from app.Module.ForcastCategories import ForecastCategories
 
 from app.supermartket.suppermartket_offers import get_tamimi_supermarket_offer
+
+from app.palm_vein.palm_vein_model_api import classify_palm_vein_image
+
 app = FastAPI()
+
+
+
 history = ""
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": "Amad Pay"}
 
 @app.get("/OCR/")
 def read_items():
@@ -170,3 +176,18 @@ def ask_ather(query: str):
     (ather, history) = ask_llama3(query, history)
     print(ather)
     return ather
+
+
+@app.post("/classify")
+async def classify_image(file: UploadFile = File(...)):
+    # Verify file is an image
+
+    try:
+        # Read and preprocess image
+        image_bytes = await file.read()
+        hh = classify_palm_vein_image(image_bytes)
+        
+        return hh
+    
+    except Exception as e:
+        return ""
