@@ -34,6 +34,7 @@ def ask_llava(base64_image):
 
 def ask_llama(base64_image):
     prompt = """Extract receipt information only and return result in JSON format as following:
+
 {
   "store_name": "...",
   "date": "...",
@@ -43,6 +44,7 @@ def ask_llama(base64_image):
 , do not add any additional information. in case of error return null json:
 """
     print("1")
+
     payload = {
         "model": "llama3.2-vision",#"llava",
         "prompt": prompt,
@@ -55,9 +57,11 @@ def ask_llama(base64_image):
     # show the raw output of the OCR process
     # print("[INFO] raw output:")
     # print("==================")
-    # print(response.json()["response"])
+    print(response.json()["response"])
     # print("\n")    
+
     print(response.json())
+
     new_data = json.loads(response.json()["response"])
     print(new_data)
     json_file = os.path.join(os.path.dirname(__file__), "..", "purchases.json")
@@ -84,3 +88,4 @@ def ask_llama(base64_image):
     with open(json_file, "w", encoding="utf-8") as f:
         json.dump(existing_data, f, indent=2, ensure_ascii=False)
     return response.json()["response"]
+
